@@ -1,0 +1,29 @@
+
+.tooltip {
+	@include transition(opacity 300ms ease);
+	@include fontSize(beta, 1.2);
+	position: absolute;
+	color: $color_white;
+	background-color: $color_deepsea;
+	margin-top: -5px;
+	padding: 3px;
+	&:after {
+		@include transform-origin(50%, 50%);
+		@include rotate(45deg);
+		content: "";
+		display: block;
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		left: 50%;
+		margin-left: -5px;
+		background-color: $color_deepsea;
+		bottom: -5px;
+	}
+	&.fade {
+		opacity: 0;
+		&.in {
+			opacity: 1;
+		}
+	}
+}

@@ -1,0 +1,189 @@
+
+
+$formInputMarginBottom: 10px;
+
+.form {
+	@include fontSize(gamma, 0);
+	display: block;
+	width: 100%;
+}
+
+.form,
+.form__input,
+.form__textarea,
+.form__select,
+.form__option,
+.form__file,
+.form__checkbox,
+.form__radio,
+.form__requiredarea,
+.form__ie9,
+.form__progress,
+.form__progressbar,
+.form__number {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.form--center {
+	text-align: center;
+	.form__input {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.form__input,
+.form__textarea,
+.form__select,
+.form__option,
+.form__file,
+.form__checkbox {
+	display: block;
+	padding: 7px;
+	width: 100%;
+	margin: 0;
+	margin-bottom: $formInputMarginBottom;
+	outline: 0;
+	border: 1px solid $color_coldsea;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.form__input {
+	&.ng-dirty.ng-invalid {
+		border-color: red;
+	}
+	&.ng-dirty.ng-valid {
+
+	}
+}
+
+.form__textarea {
+	min-height: 150px;
+	max-height: 400px;
+}
+
+.form__select {
+	padding: 6px 7px;
+	&.ng-dirty.ng-invalid {
+		border-color: red;
+	}
+	&.ng-dirty.ng-valid {
+
+	}
+}
+
+.form__radio {
+	margin-bottom: $formInputMarginBottom;
+	&.ng-dirty.ng-invalid {
+		border-color: red;
+	}
+	&.ng-dirty.ng-valid {
+
+	}
+}
+
+.form__number {
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		/* display: none; <- Crashes Chrome on hover */
+		@include appearance(none);
+		margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+	}
+}
+
+.form__option {
+
+}
+
+.form__file {
+
+}
+
+.form__btn {
+
+}
+
+.form__checkbox {
+	//@include appearance(none);
+	width: auto;
+	display: inline-block;
+	margin-bottom: ($formInputMarginBottom * 1.5);
+	& ~ & {
+		margin-left: 20px;
+	}
+	& + label {
+		display: inline-block;
+	}
+	&.ng-dirty.ng-invalid {
+		outline: 1px solid red;
+	}
+	&.ng-dirty.ng-valid {
+
+	}
+}
+
+
+.form__ie9 {
+	display: none;
+	.no-flexbox & {
+		display: block;
+	}
+}
+
+
+.form__radio {
+
+}
+
+.form__requiredarea {
+	margin-bottom: $formInputMarginBottom;
+	border: 1px solid transparent;
+}
+
+.form__requiredarea--invalid {
+	border: 1px solid red;
+}
+
+.form__progress {
+	border: 1px solid #000;
+	height: 32px;
+	width: 100%;
+}
+
+.form__progressbar {
+	display: block;
+	background-color: $color_coralsea;
+	height: 100%;
+	width: 0;
+	text-align: center;
+	overflow: hidden;
+}
+
+.form__uploaditem {
+	line-height: 32px;
+	//background-color: darken(#fff, 10%);
+	background-color: $color_coldsea;
+	color: $color_white;
+}
+
+/*
+// Angular Validation Classes
+&.ng-pristine.ng-invalid {
+	//background-color: yellow;
+}
+&.ng-ng-pristine.ng-valid {
+	//background-color: #ff69b4;
+}
+&.ng-dirty.ng-invalid {
+	border-color: $color_geramontRed;
+	//background-color: $color_geramontRed;
+}
+&.ng-dirty.ng-valid {
+	border-color: greenyellow;
+	//background-color: greenyellow;
+}
+*/

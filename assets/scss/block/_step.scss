@@ -1,0 +1,181 @@
+
+
+$stepHeaderHeight: 62px;
+
+
+.step {
+	background-color: $color_white;
+	overflow: hidden;
+	position: relative;
+	&:nth-child(1) {
+		background-color: $color_deepsea;
+		color: $color_textwhite;
+	}
+	&:nth-child(2) {
+		background-color: $color_coldsea;
+		color: $color_textwhite;
+	}
+	&:nth-child(3) {
+		background-color: $color_navyocean;
+		color: $color_textwhite;
+	}
+	&:nth-child(4) {
+		background-color: $color_greysky;
+		color: $color_textwhite;
+	}
+}
+
+.step,
+.step__header,
+.step__body,
+.step_bodyinner,
+.step__headline {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.step--active {
+	//background-color: greenyellow;
+	.step__header {
+		height: 0px;
+		padding: 0;
+	}
+	.step__body {
+		max-height: 1100px;
+		//max-height: 1500px;
+	}
+	&:nth-child(1) {
+
+	}
+	&:nth-child(2) {
+
+	}
+	&:nth-child(3) {
+
+	}
+	&:nth-child(4) {
+
+	}
+}
+.step--map {
+	.step__body {
+		background-image: url(/img/tilbudswizard/graphic/map_background_large.jpg);
+	}
+}
+.step--product {
+	.step__body {
+
+	}
+	.step_bodyinner {
+		height: auto;
+	}
+}
+.step--active.step--product {
+	.step__body {
+		max-height: 1800px;
+	}
+}
+
+.step--locked {
+	.step__locked {
+		display: block;
+	}
+	.step__unlocked {
+		display: none;
+	}
+}
+
+.step__locked {
+	@include fontSize(eta,0);
+	display: none;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -#{returnHalfFontSize(eta)};
+}
+
+.step__unlocked {
+	@include fontSize(eta,0);
+	display: block;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -#{returnHalfFontSize(eta)};
+}
+
+.step__header {
+	@include transition(all 700ms ease);
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	height: $stepHeaderHeight;
+	padding: 15px 0;
+	//line-height: $stepHeaderHeight;
+	z-index: 20;
+	cursor: pointer;
+}
+
+.step__body {
+	@include transition(max-height 800ms ease);
+	width: 100%;
+	max-height: 0px;
+	overflow: hidden;
+	z-index: 10;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-color: $color_white;
+	color: $color_textblack;
+	// TEMP v
+	background-color: $color_lightgrey;
+	//background-image: url(http://placehold.it/800x500);
+}
+
+.step_bodyinner {
+	display: block;
+	width: 100%;
+	min-height: 300px;
+	margin-top: 20px;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-box-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+
+	/*
+	-webkit-box-align: center;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	*/
+
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+
+	@include mediaQueries(desktop) {
+		min-height: 600px;
+		height: 600px;
+	}
+	@include mediaQueries(tablet) {
+		min-height: 400px;
+	}
+}
+
+.step__headline {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+}
