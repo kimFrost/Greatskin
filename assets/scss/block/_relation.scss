@@ -1,0 +1,41 @@
+
+
+
+.relation {
+	display: block;
+	&:only-child {
+		width: 100%;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	&[class*=relation--main]:first-child {
+		width: 100%;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+
+.relation {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.relation--aside {
+	width: 20%;
+	float: left;
+	& + .relation--main {
+		width: 80%;
+		padding-left: 60px;
+	}
+}
+
+.relation--main {
+	overflow: hidden;
+	width: 80%;
+	padding-right: 60px;
+	& + .relation--aside {
+		width: 20%;
+		float: right;
+	}
+}

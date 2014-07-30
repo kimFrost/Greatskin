@@ -10,13 +10,15 @@ html(data-ng-app="greatskin", lang="da")
 		script(src='./scripts/greatskin_head.js')
 		block head
 		// Fonts
-		//link(type="text/css", rel='stylesheet', href='http://fast.fonts.com/cssapi/ba002805-f090-46ee-884b-859604968980.css')
+		link(type="text/css", rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato:300,400,900,300italic,400italic,700italic,900italic')
 
 	body
 		section.greatskin(data-ng-controller="GreatskinCtrl")
 			block glovalVars
 
-			include blocks/upper.jade
+			div.container.greatskin__blackbar.greatskin__blackbar--coal
+				div.container__content
+					div.container__inner upper
 
 			include blocks/header.jade
 
@@ -26,17 +28,37 @@ html(data-ng-app="greatskin", lang="da")
 				div.container
 					div.container__content
 						div.container__inner
-							div.grid.grid--12 Breadcrumb
+							div.grid.grid--12
+								div.breadcrumb
+									a.breadcrumb__item Home
+									a.breadcrumb__item Produkter
+									a.breadcrumb__item Kvinder
 							div.grid.grid--12.grid--alignright filters
 				div.container
 					div.container__content
 						div.container__inner
-							div.productlist productlist
-							div.leftmenu leftmenu
-								div.leftmenu__list list
-								div.leftmenu__list list
-								div.leftmenu__list list
-								div.leftmenu__filter filter
+							div.relation.relation--aside
+								div.headline
+									div.headline__line
+									div.headline__text Produkter
+									div.headline__line
+								div.listmenu
+									div.listmenu__item item
+									div.listmenu__item item
+									div.listmenu__item item
+									div.listmenu__item item
+								div.headline
+									div.headline__line
+									div.headline__text Brands
+									div.headline__line
+								div.listmenu
+									div.listmenu__item item
+									div.listmenu__item item
+									div.listmenu__item item
+									div.listmenu__item item
+							div.relation.relation--main
+								div.productlist productlist
+
 				div.container
 					div.container__content
 						div.container__inner
@@ -66,11 +88,11 @@ html(data-ng-app="greatskin", lang="da")
 							div.grid.grid--6
 								p Contact information
 
-				div.container.greatskin__blackbar
-					div.container__content
-						div.container__inner
-							div.grid.grid--20 2014 Greatskin.dk All rights reserved  l Sydbank: 6840 0001441925  -  Cvr: 35 61 61 01 -  Landevejen128, 5883 Oure
-							div.grid.grid--4.grid--alignright social
+			div.container.greatskin__blackbar
+				div.container__content
+					div.container__inner
+						div.grid.grid--20 2014 Greatskin.dk All rights reserved  l Sydbank: 6840 0001441925  -  Cvr: 35 61 61 01 -  Landevejen128, 5883 Oure
+						div.grid.grid--4.grid--alignright social
 
 			block content
 

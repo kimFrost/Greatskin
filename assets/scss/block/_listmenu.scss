@@ -1,0 +1,40 @@
+
+
+
+.listmenu {
+	display: block;
+	width: 100%;
+	margin-bottom: 50px;
+	color: $color_grey;
+	text-transform: uppercase;
+	font-family: $font_lato;
+	font-weight: 400;
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.listmenu {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.listmenu__item {
+	@include fontSize(gamma, 1);
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid $color_lightgrey;
+	padding: 10px 2px;
+	cursor: pointer;
+	&:hover {
+		color: lighten($color_grey, 20%);
+		border-bottom: 1px solid lighten($color_lightgrey, 20%);
+	}
+	&:active {
+		color: darken($color_grey, 15%);
+		border-bottom: 1px solid darken($color_lightgrey, 15%);
+	}
+}

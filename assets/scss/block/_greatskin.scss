@@ -4,7 +4,8 @@
 	position: relative;
 	width: 100%;
 	background: $color_white;
-	font-family: $font_eurostilleRegular;
+	font-family: $font_lato;
+	font-weight: normal;
 }
 
 .greatskin,
@@ -21,16 +22,23 @@
 }
 
 .greatskin__blackbar {
+	@include fontSize(beta, 1);
 	display: block;
 	width: 100%;
 	background-color: $color_black;
 	color: $color_textwhite;
-	padding-top: 8px;
+	padding-top: 20px;
 	padding-bottom: 8px;
+	font-family: $font_lato;
+	font-weight: 300;
 }
 
 .greatskin__blackbar--coal {
+	@include fontSize(alpha, 1);
 	background-color: $color_coal;
+	font-family: $font_lato;
+	font-weight: 400;
+	padding-top: 8px;
 }
 
 .greatskin__header {
@@ -79,11 +87,18 @@
 .greatskin__body {
 	width: 100%;
 	display: block;
+	padding-top: 50px;
+	padding-bottom: 55px;
 }
 
 .greatskin__footer {
+	@include fontSize(gamma, 1.4);
+	font-weight: 300;
+	font-family: $font_lato;
 	width: 100%;
 	display: block;
 	background-color: $color_coal;
 	color: $color_white;
+	padding-top: 65px;
+	padding-bottom: 25px;
 }

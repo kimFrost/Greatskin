@@ -1,0 +1,47 @@
+
+
+
+
+.breadcrumb {
+	@include fontSize(eta, 1);
+	font-family: $font_lato;
+	font-weight: 400;
+	display: block;
+	width: 100%;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.breadcrumb,
+.breadcrumb__item {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.breadcrumb__item {
+	display: block;
+	float: left;
+	color: $color_lightgrey;
+	& + & {
+
+	}
+	&:after {
+		content: "/";
+		display: inline-block;
+		margin-right: 5px;
+		margin-left: 5px;
+	}
+	&:last-child {
+		font-weight: 400;
+		color: $color_textblack;
+		&:after {
+			display: none;
+		}
+	}
+}

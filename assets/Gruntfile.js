@@ -22,7 +22,7 @@ module.exports = function (grunt) {
 					'js/libs/modernizr/modernizr.custom.21372.js',
 					'js/greatskin.js'
 				],
-				dest: '../scripts/greatskin.js'
+				dest: '../scripts/greatskin_head.js'
 			},
 			greatskin: {
 				src: [
