@@ -3,6 +3,7 @@
 /fonts/
 /img/
 /scripts/
+/.idea/
 
 node_modules/
 .sass-cache/

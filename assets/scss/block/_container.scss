@@ -23,10 +23,14 @@ $__gutterWidth: 20px;
 }
 
 .container__content {
-	width: 100%;
+	//width: 100%;
+	width: $contentWidth;
 	margin: 0 auto;
-	padding-right: $__gutterWidth;
-	padding-left: $__gutterWidth;
+	//padding-right: $__gutterWidth;
+	//padding-left: $__gutterWidth;
+	padding-right: 0;
+	padding-left: 0;
+
 	@include mediaQueries(desktop){
 		width: $contentWidth;
 		padding-left: 0;
@@ -36,6 +40,11 @@ $__gutterWidth: 20px;
 		width: $contentWidth;
 		padding-left: 0;
 		padding-right: 0;
+	};
+	@include mediaQueries(mobile){
+		width: 100%;
+		padding-right: $__gutterWidth;
+		padding-left: $__gutterWidth;
 	};
 }
 

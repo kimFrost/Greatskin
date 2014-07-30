@@ -1,0 +1,89 @@
+
+.greatskin {
+	display: block;
+	position: relative;
+	width: 100%;
+	background: $color_white;
+	font-family: $font_eurostilleRegular;
+}
+
+.greatskin,
+.greatskin__upper,
+.greatskin__header,
+.greatskin__logo,
+.greatskin__basket,
+.greatskin__nav,
+.greatskin__body,
+.greatskin__footer {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.greatskin__blackbar {
+	display: block;
+	width: 100%;
+	background-color: $color_black;
+	color: $color_textwhite;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.greatskin__blackbar--coal {
+	background-color: $color_coal;
+}
+
+.greatskin__header {
+	display: block;
+	width: 100%;
+	height: 110px;
+	background-color: $color_white;
+	color: $color_textblack;
+
+	/*
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-box-align: center;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	*/
+
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.greatskin__logo {
+	display: block;
+	float: left;
+}
+
+.greatskin__basket {
+	display: block;
+	float: right;
+}
+
+.greatskin__nav {
+	display: block;
+	float: left;
+}
+
+.greatskin__body {
+	width: 100%;
+	display: block;
+}
+
+.greatskin__footer {
+	width: 100%;
+	display: block;
+	background-color: $color_coal;
+	color: $color_white;
+}

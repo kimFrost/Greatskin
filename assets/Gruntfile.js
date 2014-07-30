@@ -16,6 +16,8 @@ module.exports = function (grunt) {
 					'js/libs/html5shiv.js',
 					'js/libs/namespace/namespaces.js',
 					'js/libs/angular/1.2.14/angular.js',
+					'js/libs/angular/bootstrap/ui-bootstrap-custom-0.10.0.min.js',
+					'js/libs/angular/bootstrap/ui-bootstrap-custom-tpls-0.10.0.min.js',
 					//'js/libs/angular/angular-file-upload-0.5.7/angular-file-upload.min.js',
 					'js/libs/modernizr/modernizr.custom.21372.js',
 					'js/greatskin.js'
@@ -87,7 +89,7 @@ module.exports = function (grunt) {
 				tasks: ['compass']
 			},
 			jade: {
-				files: ["views/*.jade","views/pages/*.jade"],
+				files: ["views/*.jade", "views/pages/*.jade", "views/blocks/*.jade"],
 				tasks: ["jade"]
 			}
 		},
@@ -130,8 +132,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jade');
 	grunt.loadNpmTasks('grunt-cactuspilot');
 	// Default task.
-	grunt.registerTask('default', ['concat', 'copy', 'compass', 'cssmin', 'uglify']);
-	grunt.registerTask('dev', ['concat', 'copy', 'compass', 'watch']);
+	grunt.registerTask('default', ['concat', 'copy', 'compass', 'cssmin', 'uglify', 'jade']);
+	grunt.registerTask('dev', ['concat', 'copy', 'compass', 'jade', 'watch']);
 	grunt.registerTask('renderview', ['jade']);
 	grunt.registerTask('mee', ['cactuspilot']);
 };

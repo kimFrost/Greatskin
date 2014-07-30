@@ -4,7 +4,7 @@
 	@include fontSize(beta, 1.2);
 	position: absolute;
 	color: $color_white;
-	background-color: $color_deepsea;
+	background-color: $color_black;
 	margin-top: -5px;
 	padding: 3px;
 	&:after {
@@ -17,7 +17,7 @@
 		height: 10px;
 		left: 50%;
 		margin-left: -5px;
-		background-color: $color_deepsea;
+		background-color: $color_black;
 		bottom: -5px;
 	}
 	&.fade {

@@ -1,0 +1,27 @@
+
+
+
+.bannerblock {
+	display: block;
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	@include onlyInDebug() {
+		background-color: red;
+	}
+}
+
+.bannerblock,
+.bannerblock__banner {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.bannerblock__banner {
+	display: block;
+	width: 100%;
+	@include onlyInDebug() {
+		background-color: greenyellow;
+	}
+}

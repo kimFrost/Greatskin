@@ -2,11 +2,10 @@
 /* Global Variables */
 
 // Options booleans
-$useAdaptive: true !global; // Media Querie mixin will skip if this ain't true
-$debug: false !global; // Show debug features
+$useAdaptive: false !global; // Media Querie mixin will skip if this ain't true
+$debug: true !global; // Show debug features
 $showClasses: false !global; // Show debug features
 $allowCrossAlter: true !global; // Allow modules to alter each other // DEPRECATED --> Replaced by new blockconstructor extendmode function
-
 
 // Colors
 $color_white: #fff;
@@ -14,21 +13,16 @@ $color_black: #000;
 $color_textblack: #000;
 $color_textwhite: #fff;
 
-
-// Brand Color (Additions 2014)
-$color_deepsea: #282a39;
-$color_coldsea: #475254;
-$color_navyocean: #709293;
-$color_greysky: #c9d5c9;
-$color_lightgrey: #eaecea;
-$color_almostwhite: #f8faf9;
-$color_coralsea: #5d9395;
-
+// Greatskin Colors
+$color_navy: #437d87;
+$color_oceansurface: #5f9099;
+$color_coal: #262626;
+$color_darkgrey: #525252;
 
 // Media Queries, Labels and Content widths
 $contentWidth: "" !global;
-$mediaQueries: mobile 1px 619px, tablet 620px 1020px, desktop 1021px;
-$mediaQueriesContentWidths: mobile 320px, tablet 560px, desktop 960px;
+$mediaQueries: mobile 1px 619px, tablet 620px 1200px, desktop 1201px;
+$mediaQueriesContentWidths: mobile 320px, tablet 560px, desktop 1170px;
 $mediaQueriesDefault: desktop;
 
 @mixin resetContentWidth() {

@@ -49,6 +49,14 @@ $__blockName: 'grid';
 	margin-bottom: $__gridSpacing;
 }
 
+.grid--alignright {
+	text-align: right;
+}
+
+.grid--alignleft {
+	text-align: left;
+}
+
 // Grid sizes
 @for $i from 1 through $__gridSize {
 	.grid--#{$i} {
