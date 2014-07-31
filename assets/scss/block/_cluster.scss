@@ -4,13 +4,13 @@
 
 // For standard settings
 $cluster_item_per_line: 3;
-$cluster_item_spacing: 30px;
-$cluster_item_height: 200px;
+$cluster_item_spacing: 45px;
+$cluster_item_height: 360px;
 // Take in padding because of box-sizing:border-box
 $cluster_item_height: $cluster_item_height + $cluster_item_spacing;
 
 // For calculations
-$cluster_use_advanced: true;
+$cluster_use_advanced: false;
 $cluster_min_items_per_line: 2;
 $cluster_max_items_per_line: 2;
 $cluster_min_item_height: 100px;

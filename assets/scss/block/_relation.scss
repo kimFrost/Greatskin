@@ -8,6 +8,12 @@
 		padding-left: 0px;
 		padding-right: 0px;
 	}
+	&:first-child {
+		padding-left: 0px;
+	}
+	&:last-child {
+		padding-right: 0px;
+	}
 	&[class*=relation--main]:first-child {
 		width: 100%;
 		padding-left: 0px;

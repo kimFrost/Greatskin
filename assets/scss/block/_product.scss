@@ -1,292 +1,121 @@
 
 
-$productItemSpacing: 20px;
-
 
 .product {
 	display: block;
 	width: 100%;
+	font-weight: 400;
+	font-family: $font_lato;
 }
 
 .product,
-.product__card,
-.product__main,
-.product__aside,
-.product__asideitem,
-.product__productlist,
-.product__item,
-.product__categorybox,
-.product__productsbox,
-.product__uploadbox,
-.product__cardimage,
-.product__itemimage,
-.product__itemtext,
-.product__basketitem,
-.product__basketitemclose {
+.product__img,
+.product__addtobasket,
+.product__label,
+.product__title,
+.product__price,
+.product__desc,
+.product__delivery, {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
 
-.product__card {
+.product__img {
+	@include box-shadow(0px 5px 3px -3px rgba(0,0,0,0.3));
 	display: block;
-	color: $color_textwhite;
-	background-color: $color_deepsea;
-	padding: 10px;
+	height: 310px;
 	width: 100%;
-	cursor: pointer;
-	&:hover {
-		background-color: lighten($color_deepsea, 10%);
-	}
-	&:active {
-		background-color: darken($color_deepsea, 10%);
-	}
-}
-
-.product__card--selected {
-	background-color: $color_coralsea;
-	color: $color_textwhite;
-	&:hover {
-		background-color: lighten($color_coralsea, 10%);
-	}
-	&:active {
-		background-color: darken($color_coralsea, 10%);
-	}
-}
-
-.product__main {
-	display: block;
-	background-color: $color_almostwhite;
+	margin-bottom: 10px;
+	text-align: center;
 	position: relative;
-	overflow: hidden;
-	padding: 15px;
-	&:after {
-		content: "";
-		display: block;
-		clear: both;
-	}
-	@include mediaQueries(desktop tablet) {
-		float: left;
-		width: 70%;
-	}
-}
-
-.product__aside {
-	width: 100%;
-	float: none;
-	padding: 15px;
-	min-height: 1px;
-	background-color: $color_almostwhite;
-	margin-bottom: 10px;
-	&:after {
-		content: "";
-		display: block;
-		clear: both;
-	}
-	@include mediaQueries(desktop tablet) {
-		width: 28%;
-		margin-left: 2%;
-		float: right;
-	}
-}
-
-.product__asideitem {
-	display: block;
-	width: 100%;
-	margin-bottom: 10px;
-	&:last-child {
-		margin-bottom: 0;
-	}
-}
-
-.product__basketitem {
-	@include fontSize(beta,1);
 	background-color: $color_white;
-	border: 1px solid $color_coldsea;
-	position: relative;
-	padding: 5px;
-	display: block;
-	padding-right: 20px;
-	cursor: pointer;
-	&:hover {
-		background-color: darken($color_white, 10%);
-	}
-	&:active {
-		background-color: darken($color_white, 15%);
-	}
-}
+	overflow: hidden;
 
-.product__basketitemclose {
-	@include fontSize(beta,0);
-	position: absolute;
-	right: 10px;
-	top: 50%;
-	margin-top: -(#{returnHalfFontSize(beta)});
-	cursor: pointer;
-	//opacity: 0.7;
-	&:hover {
-		//opacity: 1;
-	}
-	&:active {
-		//opacity: 0.8;
-	}
-}
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
 
-.product__categorybox {
-	width: 100%;
-	padding: 25px;
-	margin: 0 auto 20px auto;
-	background-color: $color_almostwhite;
-	@include mediaQueries(desktop) {
-		width: 90%;
-	}
-}
+	-webkit-box-align: center;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
 
-.product__productsbox {
-	width: 100%;
-	margin: 0 auto 20px auto;
-	@include mediaQueries(desktop) {
-		width: 90%;
-	}
-}
-
-.product__uploadbox {
-	width: 100%;
-	padding: 25px;
-	margin: 0 auto 20px auto;
-	background-color: $color_almostwhite;
-	&:after {
-		content: "";
-		display: block;
-		clear: both;
-	}
-	@include mediaQueries(desktop) {
-		width: 70%;
-	}
-}
-
-.product__cardimage {
-	display: block;
-	margin: 0;
-	width: 100%;
-	position: relative;
 	& > img {
 		display: block;
-		margin: 0;
-		width: 100%;
+		margin: 0 auto;
+	}
+	&:hover {
+		.product__addtobasket {
+			@include translate(0%, 0%);
+		}
 	}
 }
 
-
-.product__productlist {
+.product__addtobasket {
+	@include fontSize(gamma, 0);
+	@include transition(all 300ms ease);
+	@include translate(0%, 100%);
+	@include hoverActiveStates($color_coal, 'background-color');
 	display: block;
-	padding: 0;
-	margin: 0;
-	margin-right: -$productItemSpacing;
-	//margin-bottom: -$productItemSpacing;
-	&:after {
-		content: "";
-		display: block;
-		clear: both;
-	}
+	width: 100%;
+	padding: 20px;
+	color: $color_white;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	cursor: pointer;
+	z-index: 60;
+	font-weight: 600;
+	text-transform: uppercase;
 }
 
-.product__item {
+.product__label {
+	@include fontSize(beta ,1);
+	@include transform-origin(-50%, 100%);
+	@include rotate(46deg); // 45deg renders even worse
 	display: block;
-	position: relative;
+	position: absolute;
+	top: -55%;
+	right: -61%;
+	width: 100%;
+	background-color: $color_oceansurface;
+	color: $color_white;
+	padding: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.product__title {
+	@include fontSize(delta, 1.4);
 	display: block;
 	float: left;
-	width: (100% / 4);
-	padding-right: $productItemSpacing;
-	padding-bottom: $productItemSpacing;
-	min-height: 1px;
-	z-index: 1;
-	list-style-image: none;
-	cursor: pointer;
-	&:nth-child(5n) {
-		clear: both;
-	}
-	@include mediaQueries(desktop) {
-		width: (100% / 6);
-		&:nth-child(7n) {
-			clear: both;
-		}
-		&:nth-child(5n) {
-			clear: none;
-		}
-	}
-	@include mediaQueries(tablet) {
-		width: (100% / 4);
-		&:nth-child(5n) {
-			clear: both;
-		}
-	}
-	&:after {
-		content: "";
-		display: block;
-		clear: both;
-	}
+	color: $color_darkgrey;
 }
 
-.product__item--active {
-
-}
-
-.product__item--active .product__itemimage{
-	border-color: $color_navyocean;
-}
-
-.product__inner {
-	width: 100%;
+.product__price {
+	@include fontSize(delta, 1.4);
 	display: block;
+	float: right;
+	color: $color_darkgrey;
 }
 
-.product__itemimage {
+.product__desc {
+	@include fontSize(gamma, 1.3);
 	display: block;
-	width: 100%;
-	background-color: $color_white;
-	border: 3px solid transparent;
-	margin-bottom: 3px;
-	min-height: 50px;
-	& > img {
-		display: block;
-		margin: 0;
-		width: 100%;
-	}
+	float: left;
+	clear: both;
+	font-weight: 300;
+	color: $color_grey;
 }
 
-.product__itemtext {
-	@include fontSize(beta, 1.2);
-	text-align: center;
+.product__delivery {
+	@include fontSize(gamma, 1.3);
 	display: block;
-	width: 100%;
-	word-wrap: break-word;
-}
-
-.product__form {
-	opacity: 0.3;
-	position: relative;
-	display: block;
-	&:before {
-		content: "";
-		display: block;
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 70;
-	}
-	&:after {
-		content: "";
-		display: block;
-		clear: both;
-	}
-}
-
-.product__form--show {
-	opacity: 1;
-	&:before {
-		display: none;
-	}
+	float: right;
+	font-weight: 300;
+	color: $color_navy;
 }

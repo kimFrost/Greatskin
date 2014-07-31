@@ -3,7 +3,7 @@
 
 // Options booleans
 $useAdaptive: false !global; // Media Querie mixin will skip if this ain't true
-$debug: true !global; // Show debug features
+$debug: false !global; // Show debug features
 $showClasses: false !global; // Show debug features
 $allowCrossAlter: true !global; // Allow modules to alter each other // DEPRECATED --> Replaced by new blockconstructor extendmode function
 
@@ -20,6 +20,7 @@ $color_coal: #262626;
 $color_darkgrey: #525252;
 $color_grey: #7b7b7b;
 $color_lightgrey: #ababab;
+$color_lightergrey: #dfe5e9;
 
 // Media Queries, Labels and Content widths
 $contentWidth: "" !global;

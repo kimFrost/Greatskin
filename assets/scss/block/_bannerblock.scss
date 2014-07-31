@@ -6,6 +6,7 @@
 	width: 100%;
 	height: 300px;
 	overflow: hidden;
+	background-color: $color_lightgrey;
 	@include onlyInDebug() {
 		background-color: red;
 	}
@@ -21,6 +22,7 @@
 .bannerblock__banner {
 	display: block;
 	width: 100%;
+	background-color: $color_lightgrey;
 	@include onlyInDebug() {
 		background-color: greenyellow;
 	}
