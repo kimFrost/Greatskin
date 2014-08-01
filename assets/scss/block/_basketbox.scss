@@ -1,0 +1,77 @@
+
+$basketboxCountDimension: 24px;
+
+.basketbox {
+	font-family: $font_lato;
+	width: 100%;
+	position: relative;
+	height: 100%;
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.basketbox,
+.basketbox__image,
+.basketbox__count,
+.basketbox__teaser,
+.basketbox__title {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.basketbox__image {
+	display: block;
+	float: left;
+	position: relative;
+	background-image: url(/img/graphic/basket.png);
+	width: image-width("img/graphic/basket.png");
+	height: image-height("img/graphic/basket.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	margin-top: 15px;
+}
+
+.basketbox__count {
+	@include fontSize(gamma, 0);
+	@include border-radius(50%, 50%, 50%, 50%);
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: $basketboxCountDimension;
+	width: $basketboxCountDimension;
+	line-height: $basketboxCountDimension;
+	background-color: $color_navy;
+	color: $color_white;
+	text-align: center;
+	font-weight: 700;
+}
+
+.basketbox__teaser {
+	text-align: left;
+	overflow: hidden;
+	height: 100%;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-box-align: center;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+
+}
+
+.basketbox__title {
+	@include fontSize(epsilon, 1);
+	width: 100%;
+	margin-bottom: 5px;
+}

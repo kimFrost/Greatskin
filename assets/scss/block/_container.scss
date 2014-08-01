@@ -22,6 +22,10 @@ $__gutterWidth: 20px;
 	-webkit-box-sizing: border-box;
 }
 
+.container--spacebottom {
+	margin-bottom: 50px;
+}
+
 .container__content {
 	//width: 100%;
 	width: $contentWidth;

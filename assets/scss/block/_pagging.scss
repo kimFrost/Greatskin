@@ -1,0 +1,34 @@
+
+
+
+.pagging {
+	display: block;
+	position: relative;
+	width: 100%;
+	font-family: $font_lato;
+	font-weight: 600;
+	text-align: center;
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.pagging,
+.pagging__item {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.pagging__item {
+	@include fontSize(epsilon, 1); //delta epsilon
+	display: inline-block;
+	padding: 15px 17px;
+	border: 2px solid $color_lightgreyblue;
+	cursor: pointer;
+	& + & {
+		margin-left: 22px;
+	}
+}

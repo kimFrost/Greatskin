@@ -1,75 +1,261 @@
 
-$__iconMap: (
-	glass: "\f000",
-	circle: "\f111",
-	arrowup: "\f062",
-	arrowright: "\f061",
-	arrowbottom: "\f063",
-	arrowleft: "\f060",
-	chevroncircledown: "\f13a",
-	chevroncircleleft: "\f137",
-	chevroncircleright: "\f138",
-	chevroncircleup: "\f139",
-	chevrondown: "\f078",
-	chevronleft: "\f053",
-	chevronright: "\f054",
-	chevronup: "\f077",
-	check: "\f00c",
-	checkcircle: "\f058",
-	timescircle: "\f057",
-	question: "\f128",
-	questionCircle: "\f059",
-	circleONotch: "\f1ce",
-	lock: "\f023",
-	unlockAlt: "\f13e"
-);
 
-@font-face {
-	font-family: 'FontAwesome';
-	src: url('../font/fontawesome-webfont.eot?');
-	src: url('../font/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-	url('../font/fontawesome-webfont.woff?') format('woff'),
-	url('../font/fontawesome-webfont.ttf?') format('truetype'),
-	url('../font/fontawesome-webfont.svg?#fontawesomeregular') format('svg');
-	//src: url('#{$fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
-	font-weight: normal;
-	font-style: normal;
-}
-
+$icon_extraspace: 5px;
 
 .icon {
-	@at-root [class^="icon"] {
-		display: inline-block;
-		font-family: FontAwesome;
-		font-style: normal;
-		font-weight: normal;
-		line-height: 1;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		&:before {
-			display: block;
-			font-family: inherit;
-			font-weight: inherit;
-		}
-	}
-
-}
-@each $key, $content in $__iconMap {
-	.icon--#{$key} {
-		&:before {
-			display: block;
-			content: $content;
-		}
+	@at-root [class*="icon--"] {
+		background-repeat: no-repeat;
+		background-position: left center;
 	}
 }
 
-.icon--square {
-	background-color: $color_white;
-	color: $color_deepsea;
-	width: 18px;
-	text-align: center;
-	line-height: 20px;
-	font-size: 12px;
-	height: 18px;
-	margin-right: 5px;
+.icon--arrow {
+	background-image: url(/img/graphic/icon/icon_arrow.png);
+	min-height: #{image-height("img/graphic/icon/icon_arrow.png")};
+	line-height: #{image-height("img/graphic/icon/icon_arrow.png")};
+	padding-left: #{image-width("img/graphic/icon/icon_arrow.png") + $icon_extraspace};
+	&.icon--noextrapadding {
+		padding-left: #{image-width("img/graphic/icon/icon_arrow.png")};
+	}
+	&.icon--sideright {
+		padding-left: 0;
+		padding-right: #{image-width("img/graphic/icon/icon_arrow.png") + $icon_extraspace};
+	}
+	&.icon--noextrapadding.icon--sideright {
+		padding-right: #{image-width("img/graphic/icon/icon_arrow.png")};
+	}
+}
+
+.icon--arrowdown {
+	background-image: url(/img/graphic/icon/icon_arrowdown.png);
+	min-height: #{image-height("img/graphic/icon/icon_arrowdown.png")};
+	line-height: #{image-height("img/graphic/icon/icon_arrowdown.png")};
+	padding-left: #{image-width("img/graphic/icon/icon_arrowdown.png") + $icon_extraspace};
+	&.icon--noextrapadding {
+		padding-left: #{image-width("img/graphic/icon/icon_arrowdown.png")};
+	}
+	&.icon--sideright {
+		padding-left: 0;
+		padding-right: #{image-width("img/graphic/icon/icon_arrowdown.png") + $icon_extraspace};
+	}
+	&.icon--noextrapadding.icon--sideright {
+		padding-right: #{image-width("img/graphic/icon/icon_arrowdown.png")};
+	}
+}
+
+
+.icon--arrowdowngrey {
+	background-image: url(/img/graphic/icon/icon_arrowdown-grey.png);
+	min-height: #{image-height("img/graphic/icon/icon_arrowdown-grey.png")};
+	line-height: #{image-height("img/graphic/icon/icon_arrowdown-grey.png")};
+	padding-left: #{image-width("img/graphic/icon/icon_arrowdown-grey.png") + $icon_extraspace};
+	&.icon--noextrapadding {
+		padding-left: #{image-width("img/graphic/icon/icon_arrowdown-grey.png")};
+	}
+	&.icon--sideright {
+		padding-left: 0;
+		padding-right: #{image-width("img/graphic/icon/icon_arrowdown-grey.png") + $icon_extraspace};
+	}
+	&.icon--noextrapadding.icon--sideright {
+		padding-right: #{image-width("img/graphic/icon/icon_arrowdown-grey.png")};
+	}
+}
+
+.icon--arrowdownsmall {
+	background-image: url(/img/graphic/icon/icon_arrowdown-small.png);
+	min-height: #{image-height("img/graphic/icon/icon_arrowdown-small.png")};
+	line-height: #{image-height("img/graphic/icon/icon_arrowdown-small.png")};
+	padding-left: #{image-width("img/graphic/icon/icon_arrowdown-small.png") + $icon_extraspace};
+	&.icon--noextrapadding {
+		padding-left: #{image-width("img/graphic/icon/icon_arrowdown-small.png")};
+	}
+	&.icon--sideright {
+		padding-left: 0;
+		padding-right: #{image-width("img/graphic/icon/icon_arrowdown-small.png") + $icon_extraspace};
+	}
+	&.icon--noextrapadding.icon--sideright {
+		padding-right: #{image-width("img/graphic/icon/icon_arrowdown-small.png")};
+	}
+}
+
+.icon--arrowright {
+	background-image: url(/img/graphic/icon/icon_arrowright.png);
+	min-height: #{image-height("img/graphic/icon/icon_arrowright.png")};
+	line-height: #{image-height("img/graphic/icon/icon_arrowright.png")};
+	padding-left: #{image-width("img/graphic/icon/icon_arrowright.png") + $icon_extraspace};
+	&.icon--noextrapadding {
+		padding-left: #{image-width("img/graphic/icon/icon_arrowright.png")};
+	}
+	&.icon--sideright {
+		padding-left: 0;
+		padding-right: #{image-width("img/graphic/icon/icon_arrowright.png") + $icon_extraspace};
+	}
+	&.icon--noextrapadding.icon--sideright {
+		padding-right: #{image-width("img/graphic/icon/icon_arrowright.png")};
+	}
+}
+
+.icon--arrowleft {
+	background-image: url(/img/graphic/icon/icon_arrowleft.png);
+	min-height: #{image-height("img/graphic/icon/icon_arrowleft.png")};
+	line-height: #{image-height("img/graphic/icon/icon_arrowleft.png")};
+	padding-left: #{image-width("img/graphic/icon/icon_arrowleft.png") + $icon_extraspace};
+	&.icon--noextrapadding {
+		padding-left: #{image-width("img/graphic/icon/icon_arrowleft.png")};
+	}
+	&.icon--sideright {
+		padding-left: 0;
+		padding-right: #{image-width("img/graphic/icon/icon_arrowleft.png") + $icon_extraspace};
+	}
+	&.icon--noextrapadding.icon--sideright {
+		padding-right: #{image-width("img/graphic/icon/icon_arrowleft.png")};
+	}
+}
+
+.icon--calender {
+	background-image: url(/img/graphic/icon/icon_calender.png);
+	min-height: #{image-height("img/graphic/icon/icon_calender.png")};
+	line-height: #{image-height("img/graphic/icon/icon_calender.png")};
+	padding-left: #{image-width("img/graphic/icon/icon_calender.png") + $icon_extraspace};
+	&.icon--noextrapadding {
+		padding-left: #{image-width("img/graphic/icon/icon_calender.png")};
+	}
+	&.icon--sideright {
+		padding-left: 0;
+		padding-right: #{image-width("img/graphic/icon/icon_calender.png") + $icon_extraspace};
+	}
+	&.icon--noextrapadding.icon--sideright {
+		padding-right: #{image-width("img/graphic/icon/icon_calender.png")};
+	}
+ }
+
+.icon--copyright {
+	background-image: url(/img/graphic/icon/icon_copyright.png);
+	min-height: #{image-height("img/graphic/icon/icon_copyright.png")};
+	line-height: #{image-height("img/graphic/icon/icon_copyright.png")};
+	padding-left: #{image-width("img/graphic/icon/icon_copyright.png") + $icon_extraspace};
+	&.icon--noextrapadding {
+		padding-left: #{image-width("img/graphic/icon/icon_copyright.png")};
+	}
+	&.icon--sideright {
+		padding-left: 0;
+		padding-right: #{image-width("img/graphic/icon/icon_copyright.png") + $icon_extraspace};
+	}
+	&.icon--noextrapadding.icon--sideright {
+		padding-right: #{image-width("img/graphic/icon/icon_copyright.png")};
+	}
+}
+
+.icon--facebook {
+	background-image: url(/img/graphic/icon/icon_facebook.png);
+	min-height: #{image-height("img/graphic/icon/icon_facebook.png")};
+	line-height: #{image-height("img/graphic/icon/icon_facebook.png")};
+	padding-left: #{image-width("img/graphic/icon/icon_facebook.png") + $icon_extraspace};
+	&.icon--noextrapadding {
+		padding-left: #{image-width("img/graphic/icon/icon_facebook.png")};
+	}
+	&.icon--sideright {
+		padding-left: 0;
+		padding-right: #{image-width("img/graphic/icon/icon_facebook.png") + $icon_extraspace};
+	}
+	&.icon--noextrapadding.icon--sideright {
+		padding-right: #{image-width("img/graphic/icon/icon_facebook.png")};
+	}
+}
+
+.icon--fast {
+	background-image: url(/img/graphic/icon/icon_fast.png);
+	min-height: #{image-height("img/graphic/icon/icon_fast.png")};
+	line-height: #{image-height("img/graphic/icon/icon_fast.png")};
+	padding-left: #{image-width("img/graphic/icon/icon_fast.png") + $icon_extraspace};
+	&.icon--noextrapadding {
+		padding-left: #{image-width("img/graphic/icon/icon_fast.png")};
+	}
+	&.icon--sideright {
+		padding-left: 0;
+		padding-right: #{image-width("img/graphic/icon/icon_fast.png") + $icon_extraspace};
+	}
+	&.icon--noextrapadding.icon--sideright {
+		padding-right: #{image-width("img/graphic/icon/icon_fast.png")};
+	}
+}
+
+.icon--fastnavy {
+	background-image: url(/img/graphic/icon/icon_fast-navy.png);
+	min-height: #{image-height("img/graphic/icon/icon_fast-navy.png")};
+	line-height: #{image-height("img/graphic/icon/icon_fast-navy.png")};
+	padding-left: #{image-width("img/graphic/icon/icon_fast-navy.png") + $icon_extraspace};
+	&.icon--noextrapadding {
+		padding-left: #{image-width("img/graphic/icon/icon_fast-navy.png")};
+	}
+	&.icon--sideright {
+		padding-left: 0;
+		padding-right: #{image-width("img/graphic/icon/icon_fast-navy.png") + $icon_extraspace};
+	}
+	&.icon--noextrapadding.icon--sideright {
+		padding-right: #{image-width("img/graphic/icon/icon_fast-navy.png")};
+	}
+}
+
+.icon--instragram {
+	background-image: url(/img/graphic/icon/icon_instragram.png);
+	min-height: #{image-height("img/graphic/icon/icon_instragram.png")};
+	line-height: #{image-height("img/graphic/icon/icon_instragram.png")};
+	padding-left: #{image-width("img/graphic/icon/icon_instragram.png") + $icon_extraspace};
+	&.icon--noextrapadding {
+		padding-left: #{image-width("img/graphic/icon/icon_instragram.png")};
+	}
+	&.icon--sideright {
+		padding-left: 0;
+		padding-right: #{image-width("img/graphic/icon/icon_instragram.png") + $icon_extraspace};
+	}
+	&.icon--noextrapadding.icon--sideright {
+		padding-right: #{image-width("img/graphic/icon/icon_instragram.png")};
+	}
+}
+
+.icon--support {
+	background-image: url(/img/graphic/icon/icon_support.png);
+	min-height: #{image-height("img/graphic/icon/icon_support.png")};
+	line-height: #{image-height("img/graphic/icon/icon_support.png")};
+	padding-left: #{image-width("img/graphic/icon/icon_support.png") + $icon_extraspace};
+	&.icon--noextrapadding {
+		padding-left: #{image-width("img/graphic/icon/icon_support.png")};
+	}
+	&.icon--sideright {
+		padding-left: 0;
+		padding-right: #{image-width("img/graphic/icon/icon_support.png") + $icon_extraspace};
+	}
+	&.icon--noextrapadding.icon--sideright {
+		padding-right: #{image-width("img/graphic/icon/icon_support.png")};
+	}
+}
+
+.icon--thumb {
+	background-image: url(/img/graphic/icon/icon_thumb.png);
+	min-height: #{image-height("img/graphic/icon/icon_thumb.png")};
+	line-height: #{image-height("img/graphic/icon/icon_thumb.png")};
+	padding-left: #{image-width("img/graphic/icon/icon_thumb.png") + $icon_extraspace};
+	&.icon--noextrapadding {
+		padding-left: #{image-width("img/graphic/icon/icon_thumb.png")};
+	}
+	&.icon--sideright {
+		padding-left: 0;
+		padding-right: #{image-width("img/graphic/icon/icon_thumb.png") + $icon_extraspace};
+	}
+	&.icon--noextrapadding.icon--sideright {
+		padding-right: #{image-width("img/graphic/icon/icon_thumb.png")};
+	}
+}
+
+.icon--nolineheight {
+	line-height: normal;
+}
+
+.icon--sideright {
+	background-position: right center;
+}
+
+.icon--noextrapadding {
+
 }

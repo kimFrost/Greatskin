@@ -19,11 +19,14 @@ html(data-ng-app="greatskin", lang="da")
 			div.container.greatskin__blackbar.greatskin__blackbar--coal
 				div.container__content
 					div.container__inner
-						div.icon.icon--arrow 30 dages returret
-						div.icon.icon--support Kundesupport
-						div.icon.icon--calender 1-3 dages levering
-						div.icon.icon--fast Fast fragt: DDK 29,-
-						div.icon.icon--thumn Gratis fragt v/køb over 600,-
+						div.inlinelist
+							div.inlinelist__item.icon.icon--arrow 30 dages returret
+							div.inlinelist__item.icon.icon--support Kundesupport
+							div.inlinelist__item.icon.icon--calender 1-3 dages levering
+							div.inlinelist__item.icon.icon--fast Fast fragt: DDK 29,-
+							div.inlinelist__item.icon.icon--thumb Gratis fragt v/køb over 600,-
+							div.inlinelist__item.icon.icon--thumb Gratis fragt v/køb over 600,-
+							div.inlinelist__item.icon.icon--arrowdown.icon--sideright.inlinelist__item--alignright Language
 
 
 			include blocks/header.jade
@@ -40,7 +43,7 @@ html(data-ng-app="greatskin", lang="da")
 									a.breadcrumb__item Produkter
 									a.breadcrumb__item Kvinder
 							div.grid.grid--12.grid--alignright filters
-				div.container
+				div.container.container--spacebottom
 					div.container__content
 						div.container__inner
 							div.relation.relation--aside
@@ -163,7 +166,17 @@ html(data-ng-app="greatskin", lang="da")
 				div.container
 					div.container__content
 						div.container__inner
-							div.pagging pagging
+							div.headline.headline--grey
+								div.headline__line
+							div.pagging
+								a.pagging__item
+									div.icon.icon--arrowleft.icon--noextrapadding
+								a.pagging__item 1
+								a.pagging__item 2
+								a.pagging__item 3
+								a.pagging__item
+									div.icon.icon--arrowright.icon--noextrapadding
+
 
 			footer.greatskin__footer
 				div.container
@@ -193,7 +206,12 @@ html(data-ng-app="greatskin", lang="da")
 				div.container__content
 					div.container__inner
 						div.grid.grid--20 2014 Greatskin.dk All rights reserved  l Sydbank: 6840 0001441925  -  Cvr: 35 61 61 01 -  Landevejen128, 5883 Oure
-						div.grid.grid--4.grid--alignright social
+						div.grid.grid--4
+							div.inlinelist.inlinelist--alignright
+								div.inlinelist__item
+									a.icon.icon--facebook.icon--noextrapadding
+								div.inlinelist__item
+									a.icon.icon--instragram.icon--noextrapadding
 
 			block content
 

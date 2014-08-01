@@ -22,6 +22,20 @@
 	-webkit-box-sizing: border-box;
 }
 
+.headline--black {
+	color: $color_black;
+	.headline__line:after {
+		background-color: $color_black;
+	}
+}
+
+.headline--grey {
+	color: $color_lightgreyblue;
+	.headline__line:after {
+		background-color: $color_lightgreyblue;
+	}
+}
+
 .headline__text {
 	display: table-cell;
 	vertical-align: middle;
