@@ -22,11 +22,15 @@
 
 .bannerblock__banner {
 	@include fill();
-	display: block;
+	display: none;
 	width: 100%;
 	background-color: $color_lightgrey;
 	z-index: 50;
 	@include onlyInDebug() {
 		background-color: greenyellow;
 	}
+}
+
+.bannerblock__banner--active {
+	display: block;
 }

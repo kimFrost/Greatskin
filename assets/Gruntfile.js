@@ -27,7 +27,9 @@ module.exports = function (grunt) {
 			greatskin: {
 				src: [
 					'js/angular.greatskin.js',
-					'js/controllers/angular.controller.greatskin.js'
+					'js/controllers/angular.controller.greatskin.js',
+					'js/controllers/angular.controller.basketbox.js',
+					'js/controllers/angular.controller.panes.js'
 				],
 				dest: '../scripts/greatskin.js'
 			}

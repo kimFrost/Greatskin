@@ -33,6 +33,8 @@ $greatskinHeaderHeight: 110px;
 	padding-bottom: 8px;
 	font-family: $font_lato;
 	font-weight: 300;
+	z-index: 30;
+	position: relative;
 }
 
 .greatskin__blackbar--coal {
@@ -50,6 +52,7 @@ $greatskinHeaderHeight: 110px;
 	height: $greatskinHeaderHeight;
 	background-color: $color_white;
 	color: $color_textblack;
+	z-index: 20;
 
 	/*
 	display: -webkit-box;

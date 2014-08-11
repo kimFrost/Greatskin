@@ -25,158 +25,14 @@ html(data-ng-app="greatskin", lang="da")
 							div.inlinelist__item.icon.icon--calender 1-3 dages levering
 							div.inlinelist__item.icon.icon--fast Fast fragt: DDK 29,-
 							div.inlinelist__item.icon.icon--thumb Gratis fragt v/køb over 600,-
-							div.inlinelist__item.icon.icon--thumb Gratis fragt v/køb over 600,-
 							div.inlinelist__item.icon.icon--arrowdown.icon--sideright.inlinelist__item--alignright Language
-
 
 			include blocks/header.jade
 
-			include blocks/banner.jade
+			block body
 
 			div.greatskin__body
-				div.container
-					div.container__content
-						div.container__inner
-							div.grid.grid--12
-								div.breadcrumb
-									a.breadcrumb__item Home
-									a.breadcrumb__item Produkter
-									a.breadcrumb__item Kvinder
-							div.grid.grid--12.grid--alignright filters
-				div.container.container--spacebottom
-					div.container__content
-						div.container__inner
-							div.relation.relation--aside
-								div.headline
-									div.headline__line
-									div.headline__text Produkter
-									div.headline__line
-								div.listmenu
-									div.listmenu__item item
-									div.listmenu__item item
-									div.listmenu__item item
-									div.listmenu__item item
-								div.headline
-									div.headline__line
-									div.headline__text Brands
-									div.headline__line
-								div.listmenu
-									div.listmenu__item item
-									div.listmenu__item item
-									div.listmenu__item item
-									div.listmenu__item item
-							div.relation.relation--main
-								//div.productlist productlist
-								div.cluster
-									div.cluster__list
-										div.cluster__item
-											div.cluster__inner
-												div.product
-													a.product__img(href="#")
-														img(src="http://placehold.it/200x200")
-														div.product__addtobasket add to basket
-														div.product__label Udsalg!
-													div.grid--24
-														div.product__title title
-														div.product__price price
-													div.grid--24
-														div.product__desc desc
-														div.product__delivery delivery
-										div.cluster__item
-											div.cluster__inner
-												div.product
-													a.product__img(href="#")
-														img(src="http://placehold.it/200x200")
-														div.product__addtobasket add to basket
-														div.product__label Udsalg!
-													div.grid--24
-														div.product__title title
-														div.product__price price
-													div.grid--24
-														div.product__desc desc
-														div.product__delivery delivery
-										div.cluster__item
-											div.cluster__inner
-												div.product
-													a.product__img(href="#")
-														img(src="http://placehold.it/200x200")
-														div.product__addtobasket add to basket
-														div.product__label Udsalg!
-													div.grid--24
-														div.product__title title
-														div.product__price price
-													div.grid--24
-														div.product__desc desc
-														div.product__delivery delivery
-										div.cluster__item
-											div.cluster__inner
-												div.product
-													a.product__img(href="#")
-														img(src="http://placehold.it/200x200")
-														div.product__addtobasket add to basket
-														div.product__label Udsalg!
-													div.grid--24
-														div.product__title title
-														div.product__price price
-													div.grid--24
-														div.product__desc desc
-														div.product__delivery delivery
-										div.cluster__item
-											div.cluster__inner
-												div.product
-													a.product__img(href="#")
-														img(src="http://placehold.it/200x200")
-														div.product__addtobasket add to basket
-														div.product__label Udsalg!
-													div.grid--24
-														div.product__title title
-														div.product__price price
-													div.grid--24
-														div.product__desc desc
-														div.product__delivery delivery
-										div.cluster__item
-											div.cluster__inner
-												div.product
-													a.product__img(href="#")
-														img(src="http://placehold.it/200x200")
-														div.product__addtobasket add to basket
-														div.product__label Udsalg!
-													div.grid--24
-														div.product__title title
-														div.product__price price
-													div.grid--24
-														div.product__desc desc
-														div.product__delivery delivery
-										div.cluster__item
-											div.cluster__inner
-												div.product
-													a.product__img(href="#")
-														img(src="http://placehold.it/200x200")
-														div.product__addtobasket add to basket
-														div.product__label Udsalg!
-													div.grid--24
-														div.product__title title
-														div.product__price price
-													div.grid--24
-														div.product__desc desc
-														div.product__delivery delivery
-
-
-
-				div.container
-					div.container__content
-						div.container__inner
-							div.headline.headline--grey
-								div.headline__line
-							div.pagging
-								a.pagging__item
-									div.icon.icon--arrowleft.icon--noextrapadding
-								a.pagging__item 1
-								a.pagging__item 2
-								a.pagging__item 3
-								a.pagging__item
-									div.icon.icon--arrowright.icon--noextrapadding
-
+				block content
 
 			footer.greatskin__footer
 				div.container
@@ -213,8 +69,6 @@ html(data-ng-app="greatskin", lang="da")
 								div.inlinelist__item
 									a.icon.icon--instragram.icon--noextrapadding
 
-			block content
 
 
-		block body
 		script(src='./scripts/greatskin.js')

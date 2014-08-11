@@ -1,0 +1,126 @@
+extends ../master
+
+block append head
+
+block append body
+
+block append content
+	div.container
+		div.container__content
+			div.container__inner
+				div.grid.grid--12
+					div.breadcrumb
+						a.breadcrumb__item Home
+						a.breadcrumb__item Shop
+						a.breadcrumb__item Kvinder
+				div.grid.grid--12.grid--alignright
+
+	div.container.container--spacebottom
+		div.container__content
+			div.container__inner
+				div.productdetail
+					div.productdetail__image
+						div.productdetail__mainimage
+							img(src="http://placehold.it/585x585")
+						div.productdetail__thumbs
+							div.productdetail__thumb
+								img(src="http://placehold.it/175x175")
+							div.productdetail__thumb
+								img(src="http://placehold.it/175x175")
+							div.productdetail__thumb
+								img(src="http://placehold.it/175x175")
+					div.productdetail__info
+						div.productdetail__title Product name (REPLACE ME)
+						div.headline.headline--grey
+							div.headline__line
+						div.productdetail__desc
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel pulvinar diam vulputate quis ,vel pulvinar diam vulputate quis. Donec porttitor volutpat rutrum.  Vulputate quis. Donec porttitor volutpat rutrum. Donec porttitor volutpat rutrum.  Vulputate quis.
+						div.productdetail__addtobasket add to basket
+						div.productdetail__trustpilot trustpilot
+						div.headline.headline--grey
+							div.headline__line
+						div.productdetail__social Social
+
+	div.container
+		div.container__content
+			div.container__inner
+				div.panes(data-ng-controller="PanesCtrl")
+					div.panes__nav
+						div.panes__link(data-ng-class="{'panes__link--active':panesctrl.checkActive(0)}", data-ng-click="panesctrl.activate(0)") Description
+						div.panes__link(data-ng-class="{'panes__link--active':panesctrl.checkActive(1)}", data-ng-click="panesctrl.activate(1)") Information
+						div.panes__link(data-ng-class="{'panes__link--active':panesctrl.checkActive(2)}", data-ng-click="panesctrl.activate(2)") Shipping
+						div.panes__link(data-ng-class="{'panes__link--active':panesctrl.checkActive(3)}", data-ng-click="panesctrl.activate(3)") Terms
+					div.panes__pane(data-ng-class="{'panes__pane--show':panesctrl.checkActive(0)}")
+						p Pane 1
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non facilisis nisl. Nullam aliquet arcu non nunc pharetra, faucibus egestas lorem varius. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur mauris neque, convallis vel augue sed, fermentum gravida orci. Suspendisse nibh justo, vestibulum nec condimentum sed, luctus sit amet est. Aenean blandit mi dui, consequat suscipit augue gravida et. Cras a ligula dignissim, vulputate purus et, adipiscing nunc. In lacinia sollicitudin tellus.
+						p Id tristique ligula sodales sit amet. Pellentesque commodo nibh vitae tortor aliquam, vitae tincidunt nibh malesuada. Nulla pretium mollis augue elementum ultricies. Pellentesque imperdiet odio sit amet massa sollicitudin interdum. Ut quis massa non mauris interdum vestibulum ac accumsan sapien. Maecenas luctus sapien tortor, in laoreet libero feugiat pellentesque.
+					div.panes__pane(data-ng-class="{'panes__pane--show':panesctrl.checkActive(1)}")
+						p Pane 2
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non facilisis nisl. Nullam aliquet arcu non nunc pharetra, faucibus egestas lorem varius. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur mauris neque, convallis vel augue sed, fermentum gravida orci. Suspendisse nibh justo, vestibulum nec condimentum sed, luctus sit amet est. Aenean blandit mi dui, consequat suscipit augue gravida et. Cras a ligula dignissim, vulputate purus et, adipiscing nunc. In lacinia sollicitudin tellus.
+						p Id tristique ligula sodales sit amet. Pellentesque commodo nibh vitae tortor aliquam, vitae tincidunt nibh malesuada. Nulla pretium mollis augue elementum ultricies. Pellentesque imperdiet odio sit amet massa sollicitudin interdum. Ut quis massa non mauris interdum vestibulum ac accumsan sapien. Maecenas luctus sapien tortor, in laoreet libero feugiat pellentesque.
+					div.panes__pane(data-ng-class="{'panes__pane--show':panesctrl.checkActive(2)}")
+						p Pane 3
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non facilisis nisl. Nullam aliquet arcu non nunc pharetra, faucibus egestas lorem varius. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur mauris neque, convallis vel augue sed, fermentum gravida orci. Suspendisse nibh justo, vestibulum nec condimentum sed, luctus sit amet est. Aenean blandit mi dui, consequat suscipit augue gravida et. Cras a ligula dignissim, vulputate purus et, adipiscing nunc. In lacinia sollicitudin tellus.
+						p Id tristique ligula sodales sit amet. Pellentesque commodo nibh vitae tortor aliquam, vitae tincidunt nibh malesuada. Nulla pretium mollis augue elementum ultricies. Pellentesque imperdiet odio sit amet massa sollicitudin interdum. Ut quis massa non mauris interdum vestibulum ac accumsan sapien. Maecenas luctus sapien tortor, in laoreet libero feugiat pellentesque.
+					div.panes__pane(data-ng-class="{'panes__pane--show':panesctrl.checkActive(3)}")
+						p Pane 4
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non facilisis nisl. Nullam aliquet arcu non nunc pharetra, faucibus egestas lorem varius. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur mauris neque, convallis vel augue sed, fermentum gravida orci. Suspendisse nibh justo, vestibulum nec condimentum sed, luctus sit amet est. Aenean blandit mi dui, consequat suscipit augue gravida et. Cras a ligula dignissim, vulputate purus et, adipiscing nunc. In lacinia sollicitudin tellus.
+						p Id tristique ligula sodales sit amet. Pellentesque commodo nibh vitae tortor aliquam, vitae tincidunt nibh malesuada. Nulla pretium mollis augue elementum ultricies. Pellentesque imperdiet odio sit amet massa sollicitudin interdum. Ut quis massa non mauris interdum vestibulum ac accumsan sapien. Maecenas luctus sapien tortor, in laoreet libero feugiat pellentesque.
+
+
+	div.container
+		div.container__content
+			div.container__inner
+				div.headline.headline--grey
+					div.headline__text Relatederede produkter
+					div.headline__line
+				div.cluster.cluster--line4
+					div.cluster__list
+						div.cluster__item
+							div.cluster__inner
+								div.product.product--related
+									a.product__img(href="#")
+										img(src="http://placehold.it/200x200")
+										div.product__addtobasket add to basket
+										div.product__label Udsalg!
+									div.grid--24
+										div.product__title title
+										div.product__price price
+									div.grid--24
+										div.product__desc desc
+						div.cluster__item
+							div.cluster__inner
+								div.product.product--related
+									a.product__img(href="#")
+										img(src="http://placehold.it/200x200")
+										div.product__addtobasket add to basket
+										div.product__label Udsalg!
+									div.grid--24
+										div.product__title title
+										div.product__price price
+									div.grid--24
+										div.product__desc desc
+						div.cluster__item
+							div.cluster__inner
+								div.product.product--related
+									a.product__img(href="#")
+										img(src="http://placehold.it/200x200")
+										div.product__addtobasket add to basket
+										div.product__label Udsalg!
+									div.grid--24
+										div.product__title title
+										div.product__price price
+									div.grid--24
+										div.product__desc desc
+						div.cluster__item
+							div.cluster__inner
+								div.product.product--related
+									a.product__img(href="#")
+										img(src="http://placehold.it/200x200")
+										div.product__addtobasket add to basket
+										div.product__label Udsalg!
+									div.grid--24
+										div.product__title title
+										div.product__price price
+									div.grid--24
+										div.product__desc desc

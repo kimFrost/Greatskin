@@ -12,14 +12,16 @@ div.container.greatskin__header
 					div.greatskin__navitem
 						a.icon.icon--arrowdowngrey.icon--sideright link3
 			div.greatskin__basket
-				div.basketbox
+				div.basketbox(data-ng-controller="BasketboxCtrl")
+					div.basketbox__dropdown(data-ng-class="{'basketbox__dropdown--show':basketboxctrl.states.showbasket}")
+						| Basket list
 					div.basketbox__image
 						div.basketbox__count 2
-					div.basketbox__teaser
+					div.basketbox__teaser(data-ng-click="basketboxctrl.togglebasket()")
+						div.basketbox__icon
+							div.icon.icon--arrowdownsmall
 						div.basketbox__title Indkøbskurv
 						div.grid.grid--24 2 varer i posen
 						div.grid.grid--24
-							| Total
+							| Total &nbsp
 							b DDK 595,00
-
-
