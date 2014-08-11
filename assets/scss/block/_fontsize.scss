@@ -1,0 +1,19 @@
+
+
+.fontsize {
+
+}
+
+@for $i from 1 through length($fontsizes) {
+	$size : nth($fontsizes,$i);
+	$sizeLabel : nth($size, 1);
+	$sizeNumber : nth($size, 2);
+	.fontsize--#{$sizeLabel} {
+		@include fontSize($sizeLabel, 1);
+	}
+}
+
+.fontsize--nolineheight {
+	line-height: normal;
+}
+

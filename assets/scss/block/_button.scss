@@ -2,14 +2,15 @@
 
 
 
-$__buttonHeight: 32px;
-
+$__buttonHeight: 48px;
+$__buttonBorderRadius: 5px;
 
 .button {
-	@include fontSize(alpha, 0);
+	@include border-radius($__buttonBorderRadius, $__buttonBorderRadius, $__buttonBorderRadius, $__buttonBorderRadius);
+	@include fontSize(epsilon, 0);
 	@include noUserSelect();
 	color: $color_textwhite;
-	background-color: $color_deepsea;
+	background-color: $color_grey;
 	height: $__buttonHeight;
 	line-height: $__buttonHeight;
 	border: none;
@@ -20,16 +21,16 @@ $__buttonHeight: 32px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	outline: 0;
-	padding: 0 7px;
+	padding: 0 20px;
 	text-transform: uppercase;
 	position: relative;
 	background-repeat: no-repeat;
 	background-position: right center;
 	&:hover {
-		background-color: lighten($color_deepsea, 10%);
+		background-color: lighten($color_grey, 10%);
 	}
 	&:active {
-		background-color: darken($color_deepsea, 10%);
+		background-color: darken($color_grey, 10%);
 	}
 }
 
@@ -49,6 +50,11 @@ $__buttonHeight: 32px;
 	white-space: normal;
 }
 
+.button--extrabuff {
+	.button__text {
+		margin-right: 50px;
+	}
+}
 
 .button--stretch {
 	width: 100%;
@@ -56,25 +62,29 @@ $__buttonHeight: 32px;
 }
 
 .button--arrow {
-	text-align: left;
-	background-image: url(/img/tilbudswizard/graphic/button_arrow.png);
-	padding-right: 30px;
+	&:after {
+		content: "";
+		display: inline-block;
+		background-image: url(/img/graphic/arrowright.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		width: image-width("img/graphic/arrowright.png");
+		height: image-height("img/graphic/arrowright.png");
+		margin-left: 20px;
+		line-height: inherit;
+	}
 }
 
-.button--arrowleft {
-	text-align: right;
-	background-image: url(/img/tilbudswizard/graphic/button_arrow_left.png);
-	background-position: left center;
-	padding-left: 30px;
-}
-
-.button--coral {
-	background-color: $color_coralsea;
+.button--orange {
+	background-color: $color_orange;
+	border-bottom: 3px solid darken($color_orange, 10%);
 	&:hover {
-		background-color: lighten($color_coralsea, 10%);
+		background-color: lighten($color_orange, 5%);
+		border-bottom: 3px solid darken($color_orange, 5%);
 	}
 	&:active {
-		background-color: darken($color_coralsea, 10%);
+		background-color: darken($color_orange, 5%);
+		border-bottom: 3px solid darken($color_orange, 15%);
 	}
 }
 

@@ -1,0 +1,14 @@
+
+
+.lineheight {
+
+}
+
+@for $i from 1 through length($fontsizes) {
+	$size : nth($fontsizes,$i);
+	$sizeLabel : nth($size, 1);
+	$sizeNumber : nth($size, 2);
+	.lineheight--#{$sizeLabel} {
+		line-height: #{returnFontSize($sizeLabel)};
+	}
+}
