@@ -1,0 +1,24 @@
+// (BLOCK)(BEGIN) - Panes
+div.panes(data-ng-controller="PanesCtrl")
+	div.panes__nav
+		div.panes__link(data-ng-class="{'panes__link--active':panesctrl.checkActive(0)}", data-ng-click="panesctrl.activate(0)") Description
+		div.panes__link(data-ng-class="{'panes__link--active':panesctrl.checkActive(1)}", data-ng-click="panesctrl.activate(1)") Information
+		div.panes__link(data-ng-class="{'panes__link--active':panesctrl.checkActive(2)}", data-ng-click="panesctrl.activate(2)") Shipping
+		div.panes__link(data-ng-class="{'panes__link--active':panesctrl.checkActive(3)}", data-ng-click="panesctrl.activate(3)") Terms
+	div.panes__pane(data-ng-class="{'panes__pane--show':panesctrl.checkActive(0)}")
+		p Pane 1
+		p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non facilisis nisl. Nullam aliquet arcu non nunc pharetra, faucibus egestas lorem varius. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur mauris neque, convallis vel augue sed, fermentum gravida orci. Suspendisse nibh justo, vestibulum nec condimentum sed, luctus sit amet est. Aenean blandit mi dui, consequat suscipit augue gravida et. Cras a ligula dignissim, vulputate purus et, adipiscing nunc. In lacinia sollicitudin tellus.
+		p Id tristique ligula sodales sit amet. Pellentesque commodo nibh vitae tortor aliquam, vitae tincidunt nibh malesuada. Nulla pretium mollis augue elementum ultricies. Pellentesque imperdiet odio sit amet massa sollicitudin interdum. Ut quis massa non mauris interdum vestibulum ac accumsan sapien. Maecenas luctus sapien tortor, in laoreet libero feugiat pellentesque.
+	div.panes__pane(data-ng-class="{'panes__pane--show':panesctrl.checkActive(1)}")
+		p Pane 2
+		p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non facilisis nisl. Nullam aliquet arcu non nunc pharetra, faucibus egestas lorem varius. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur mauris neque, convallis vel augue sed, fermentum gravida orci. Suspendisse nibh justo, vestibulum nec condimentum sed, luctus sit amet est. Aenean blandit mi dui, consequat suscipit augue gravida et. Cras a ligula dignissim, vulputate purus et, adipiscing nunc. In lacinia sollicitudin tellus.
+		p Id tristique ligula sodales sit amet. Pellentesque commodo nibh vitae tortor aliquam, vitae tincidunt nibh malesuada. Nulla pretium mollis augue elementum ultricies. Pellentesque imperdiet odio sit amet massa sollicitudin interdum. Ut quis massa non mauris interdum vestibulum ac accumsan sapien. Maecenas luctus sapien tortor, in laoreet libero feugiat pellentesque.
+	div.panes__pane(data-ng-class="{'panes__pane--show':panesctrl.checkActive(2)}")
+		p Pane 3
+		p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non facilisis nisl. Nullam aliquet arcu non nunc pharetra, faucibus egestas lorem varius. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur mauris neque, convallis vel augue sed, fermentum gravida orci. Suspendisse nibh justo, vestibulum nec condimentum sed, luctus sit amet est. Aenean blandit mi dui, consequat suscipit augue gravida et. Cras a ligula dignissim, vulputate purus et, adipiscing nunc. In lacinia sollicitudin tellus.
+		p Id tristique ligula sodales sit amet. Pellentesque commodo nibh vitae tortor aliquam, vitae tincidunt nibh malesuada. Nulla pretium mollis augue elementum ultricies. Pellentesque imperdiet odio sit amet massa sollicitudin interdum. Ut quis massa non mauris interdum vestibulum ac accumsan sapien. Maecenas luctus sapien tortor, in laoreet libero feugiat pellentesque.
+	div.panes__pane(data-ng-class="{'panes__pane--show':panesctrl.checkActive(3)}")
+		p Pane 4
+		p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non facilisis nisl. Nullam aliquet arcu non nunc pharetra, faucibus egestas lorem varius. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur mauris neque, convallis vel augue sed, fermentum gravida orci. Suspendisse nibh justo, vestibulum nec condimentum sed, luctus sit amet est. Aenean blandit mi dui, consequat suscipit augue gravida et. Cras a ligula dignissim, vulputate purus et, adipiscing nunc. In lacinia sollicitudin tellus.
+		p Id tristique ligula sodales sit amet. Pellentesque commodo nibh vitae tortor aliquam, vitae tincidunt nibh malesuada. Nulla pretium mollis augue elementum ultricies. Pellentesque imperdiet odio sit amet massa sollicitudin interdum. Ut quis massa non mauris interdum vestibulum ac accumsan sapien. Maecenas luctus sapien tortor, in laoreet libero feugiat pellentesque.
+// (BLOCK)(END) - Panes

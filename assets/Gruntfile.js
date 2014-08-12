@@ -103,13 +103,22 @@ module.exports = function (grunt) {
 						debug: false
 					}
 				},
-				files: [ {
-					cwd: "views/pages",
-					src: "**/*.jade",
-					dest: "../",
-					expand: true,
-					ext: ".html"
-				} ]
+				files: [
+					{
+						cwd: "views/pages",
+						src: "**/*.jade",
+						dest: "../",
+						expand: true,
+						ext: ".html"
+					},
+					{
+						cwd: "views/",
+						src: "**/*.jade",
+						dest: "views/html",
+						expand: true,
+						ext: ".html"
+					}
+				]
 			}
 		},
 		cactuspilot: {
