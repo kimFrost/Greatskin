@@ -8,6 +8,7 @@
 	overflow: hidden;
 	background-color: $color_lightgrey;
 	position: relative;
+	z-index: 0;
 	@include onlyInDebug() {
 		background-color: red;
 	}

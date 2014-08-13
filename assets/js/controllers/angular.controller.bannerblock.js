@@ -1,8 +1,7 @@
 ;(function(window, document, undefined) {
 	var Greatskin = new namespace("Greatskin");
 
-
-	// Greatskin Controller
+	// Bannerblock Controller
 	Greatskin.Angular.controller('BannerblockCtrl', ['$scope', '$timeout', function($scope, $timeout) {
 
 		// Data
@@ -18,6 +17,15 @@
 			},
 			css: {}
 		};
+
+		/*
+		console.log($scope.boomla);
+		$scope.$watch("boomla", function(oldval, newval) {
+			console.log("$watch");
+			console.log(oldval);
+			console.log(newval);
+		});
+		*/
 
 		/* Scope Functions
 		 ===========================*/
@@ -53,6 +61,31 @@
 
 		// Set Autoplay
 		$scope.bannerblockctrl.setAutoPlay();
+
+	}]);
+
+
+	Greatskin.Angular.controller('BannerCtrl', ['$scope', '$timeout', function($scope, $timeout) {
+
+		// Data
+		$scope.bannerctrl = {
+			options: {
+
+			},
+			states: {
+
+			},
+			css: {}
+		};
+
+		/* Scope Functions
+		 ===========================*/
+
+		/* Bindings
+		 ===========================*/
+		// Scope Events
+
+		// User Events
 
 	}]);
 
