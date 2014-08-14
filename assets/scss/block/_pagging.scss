@@ -31,4 +31,12 @@
 	& + & {
 		margin-left: 22px;
 	}
+	&:after {
+		//content: "";
+		//display: inline-block;
+	}
+}
+
+.pagging__item--active {
+	background-color: $color_white;
 }
