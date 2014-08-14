@@ -8,7 +8,7 @@
 		$scope.bannerblockctrl = {
 			options: {
 				autoplay: true,
-				autoplaytime: 1000
+				autoplaytime: 3000
 			},
 			activebanner: 0,
 			timer: null,
@@ -18,14 +18,14 @@
 			css: {}
 		};
 
-		/*
+
 		console.log($scope.boomla);
 		$scope.$watch("boomla", function(oldval, newval) {
 			console.log("$watch");
 			console.log(oldval);
 			console.log(newval);
 		});
-		*/
+
 
 		/* Scope Functions
 		 ===========================*/

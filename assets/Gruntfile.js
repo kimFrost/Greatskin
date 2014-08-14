@@ -28,7 +28,7 @@ module.exports = function (grunt) {
 				src: [
 					'js/angular.greatskin.js',
 					'js/directives/angular.directive.saveattr.js',
-					//'js/directives/angular.directive.bannerblock.js',
+					'js/directives/angular.directive.bannerblock.js',
 					'js/controllers/angular.controller.greatskin.js',
 					'js/controllers/angular.controller.basketbox.js',
 					'js/controllers/angular.controller.panes.js',
