@@ -1,9 +1,8 @@
 
-
-
 .rte {
-	@include fontSize(gamma, 1.3);
-	font-family: $font_eurostilleRegular;
+	@include fontSize(gamma, 1.25);
+	font-family: $font_lato;
+	font-weight: normal;
 	display: block;
 	width: 100%;
 	text-transform: none;
@@ -15,15 +14,39 @@
 	-webkit-box-sizing: border-box;
 }
 
-.rte p {
-	font-size: inherit;
-	color: inherit;
-	line-height: inherit;
-	text-transform: inherit;
+.rte {
+	p, h1, h2, h3, h4 {
+		font-size: inherit;
+		color: inherit;
+		line-height: inherit;
+		text-transform: inherit;
+		margin-top: 0;
+	}
+	table, thead, tbody, tr, td, th {
+		padding: 0;
+		border: 0;
+	}
+	p {
+		margin-bottom: 5px;
+	}
+	a {
+		@include hoverActiveStates($color_navy);
+		text-decoration: underline;
+	}
 }
-.rte__focus {
-	color: $color_navyocean;
+
+.rte--uppercase {
+	text-transform: uppercase;
 }
-p.rte__focus {
-	color: $color_navyocean;
+
+.rte--light {
+	@include fontSize(beta, 1.6);
+	font-weight: 100;
+	a {
+		@include hoverActiveStates($color_textwhite);
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }

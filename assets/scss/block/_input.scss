@@ -1,0 +1,39 @@
+
+
+.input {
+	@include fontSize(beta, 0);
+	@include appearance(none);
+	display: block;
+	margin: 0;
+	outline: none;
+	border: none;
+	padding: 12px 15px;
+	text-transform: uppercase;
+}
+
+.input {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.input--stretch {
+	width: 100%;
+}
+
+.input--text {
+	background-color: darken($color_white, 5%);
+	color: $color_grey;
+	&.ng-dirty.ng-invalid {
+		background-color: $color_warningred;
+	}
+	&.ng-dirty.ng-valid {
+
+	}
+}
+
+.input--submit {
+	@include hoverActiveStates($color_navy, 'background-color');
+	color: $color_textwhite;
+	cursor: pointer;
+}

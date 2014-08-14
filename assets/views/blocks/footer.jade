@@ -4,24 +4,87 @@ footer.greatskin__footer
 		div.container__content
 			div.container__inner
 				div.grid.grid--5
-					p
-						| Hos Greatskin.dk har vi en mission.
-						| Vi ønsker at være landets fortrukne
-						| valg indenfor kosmetik og hudpleje.
-					p
-						| Med en kombination af skarpe priser
-						| og kvalitets produkter, har vi sat os
-						| for, at alle fortjener en sund hud
-						| uden at det skal koste en bondegård.
+					div.rte.rte--light
+						p
+							| Hos Greatskin.dk har vi en mission.
+							| Vi ønsker at være landets fortrukne
+							| valg indenfor kosmetik og hudpleje.
+						br
+						p
+							| Med en kombination af skarpe priser
+							| og kvalitets produkter, har vi sat os
+							| for, at alle fortjener en sund hud
+							| uden at det skal koste en bondegård.
 				div.grid.grid--1
 				div.grid.grid--5
 					p Facebook
 				div.grid.grid--1
 				div.grid.grid--5
-					p Newsletter
+					div.grid.grid--spacebottom.rte.rte--uppercase
+						p Få 10% på din første bestilling
+						p Tilmeld dig nyhedsbrevet
+					div.grid.grid--24.grid--spacebottom
+						form(data-ng-controller="SubscribeCtrl", name="form", novalidate)
+							div.grid.grid--16
+								input.input.input--stretch.input--text(type="email", placeholder="Din e-mail adresse", required, data-ng-model="form.formdata.email")
+							div.grid.grid--8
+								input.input.input--stretch.input--submit(type="button", value="Tilmeld", data-ng-click="subscribectrl.subscribe()")
+					div.grid.grid--24.grid--spacebottom
+					div.grid.grid--24.grid--spacebottom
+					div.rte.rte--uppercase
+						p Information
+					div.rte.rte--light
+						table
+							tbody
+								tr
+									td
+										a(href="#") Levering
+									td(width="20")
+									td
+										a(href="#") Blog
+								tr
+									td
+										a(href="#") Betingelser
+									td(width="20")
+									td
+										a(href="#") Kontakt os
+								tr
+									td
+										a(href="#") Om os
+									td(width="20")
+									td
+										a(href="#") Kunderne siger
+
 				div.grid.grid--1
 				div.grid.grid--6
-					p Contact information
+					div.rte.rte--uppercase
+						p Telefon:  71 99 54 94
+						p
+							| Email:&nbsp&nbsp
+							a(href="mailto:Kontakt@greatskin.dk") Kontakt@greatskin.dk
+						br
+						p Åbningstider telefon:
+						table
+							tbody
+								tr
+									td Man-fre:
+									td(width="10")
+									td 16-22
+								tr
+									td Lørdag:
+									td(width="10")
+									td 16-22
+								tr
+									td Søndag:
+									td(width="10")
+									td Lukket
+						br
+						p Vi modtager følgende kort
+						div
+							img(src="/img/content/cards.png", alt="Betalingskort")
+
+
+
 
 div.container.greatskin__blackbar
 	div.container__content

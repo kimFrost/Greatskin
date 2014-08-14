@@ -16,8 +16,8 @@ module.exports = function (grunt) {
 					'js/libs/html5shiv.js',
 					'js/libs/namespace/namespaces.js',
 					'js/libs/angular/1.2.14/angular.js',
-					'js/libs/angular/bootstrap/ui-bootstrap-custom-0.10.0.min.js',
-					'js/libs/angular/bootstrap/ui-bootstrap-custom-tpls-0.10.0.min.js',
+					//'js/libs/angular/bootstrap/ui-bootstrap-custom-0.10.0.min.js',
+					//'js/libs/angular/bootstrap/ui-bootstrap-custom-tpls-0.10.0.min.js',
 					//'js/libs/angular/angular-file-upload-0.5.7/angular-file-upload.min.js',
 					'js/libs/modernizr/modernizr.custom.21372.js',
 					'js/greatskin.js'
@@ -27,12 +27,13 @@ module.exports = function (grunt) {
 			greatskin: {
 				src: [
 					'js/angular.greatskin.js',
-					'js/directives/angular.directive.saveattr.js',
+					//'js/directives/angular.directive.saveattr.js',
 					'js/directives/angular.directive.bannerblock.js',
 					'js/controllers/angular.controller.greatskin.js',
 					'js/controllers/angular.controller.basketbox.js',
 					'js/controllers/angular.controller.panes.js',
-					'js/controllers/angular.controller.bannerblock.js'
+					'js/controllers/angular.controller.subscribe.js'
+					//'js/controllers/angular.controller.bannerblock.js'
 				],
 				dest: '../scripts/greatskin.js'
 			}
@@ -43,7 +44,7 @@ module.exports = function (grunt) {
 			},
 			head: {
 				src: '<%= concat.head.dest %>',
-				dest: '../scripts/greatskin.min.js'
+				dest: '../scripts/greatskin_head.min.js'
 			},
 			greatskin: {
 				src: '<%= concat.greatskin.dest %>',
