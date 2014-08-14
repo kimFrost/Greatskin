@@ -22,16 +22,22 @@
 }
 
 .bannerblock__banner {
+	@include transition(opacity 300ms ease);
 	@include fill();
-	display: none;
+	//display: none;
+	display: block;
 	width: 100%;
 	background-color: $color_lightgrey;
 	z-index: 50;
+	opacity: 0;
+	z-index: 1;
 	@include onlyInDebug() {
 		background-color: greenyellow;
 	}
 }
 
 .bannerblock__banner--active {
-	display: block;
+	//display: block;
+	opacity: 1;
+	z-index: 0;
 }

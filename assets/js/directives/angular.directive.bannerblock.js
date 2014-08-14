@@ -8,16 +8,16 @@
 			scope: {
 				numOfItems: "@"
 			},
-			//template: '<div class="transcluded"></div>',
+			//template: '<div data-ng-transclude></div>',
 			//templateUrl: "banner.html",
 			controller: function($scope) {
 
-				console.log("controller");
 				// Data
 				$scope.bannerblock = {
 					options: {
 						autoplay: true,
-						autoplaytime: 1000
+						autoplaytime: 10000,
+						numOfItems: parseInt($scope.numOfItems)
 					},
 					activebanner: 0,
 					timer: null,
@@ -28,7 +28,6 @@
 				};
 
 				$scope.bannerblock.checkActive = function(id) {
-					console.log(id);
 					if (id != undefined) {
 						if (id == $scope.bannerblock.activebanner) {
 							return true;
@@ -39,18 +38,24 @@
 					}
 				};
 				$scope.bannerblock.testFunc = function() {
-					console.log("asda2da");
+
 				};
 				$scope.bannerblock.switch = function(direction, jump) {
+					direction = (direction === undefined) ? 1 : direction;
 					$timeout.cancel($scope.bannerblock.timer);
-					console.log("switch");
-
-					$scope.bannerblock.setAutoPlay();
+					var activeIndex = $scope.bannerblock.activebanner;
+					var newActiveIndex = (activeIndex + direction) % $scope.bannerblock.options.numOfItems;
+					if (newActiveIndex < 0) {
+						newActiveIndex = Math.abs($scope.bannerblock.options.numOfItems + newActiveIndex);
+					}
+					$scope.bannerblock.activebanner = newActiveIndex;
+					$scope.bannerblock.setAutoPlay(direction);
 				};
-				$scope.bannerblock.setAutoPlay = function() {
+				$scope.bannerblock.setAutoPlay = function(direction) {
+					direction = (direction === undefined) ? 1 : direction;
 					if ($scope.bannerblock.options.autoplay) {
 						$scope.bannerblock.timer = $timeout(function(){
-							$scope.bannerblock.switch(1);
+							$scope.bannerblock.switch(direction);
 						}, $scope.bannerblock.options.autoplaytime);
 					}
 				}

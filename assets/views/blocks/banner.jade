@@ -1,7 +1,7 @@
 // (BLOCK)(BEGIN) - Banner
 //-div.container.bannerblock(data-ng-controller="BannerblockCtrl",)
 //-div.container.bannerblock(data-ng-controller="BannerblockCtrl")
-div.container.bannerblock
+div.container.bannerblock(data-num-of-items="4")
 	//-div(data-saveattr="[{'boomla':'testvalue'}]")
 	div.bannerblock__banner(data-ng-class="{'bannerblock__banner--active': bannerblock.checkActive(0)}", data-ng-click="bannerblock.testFunc()")
 		div.container__content
@@ -16,3 +16,4 @@ div.container.bannerblock
 		div.container__content
 			div.container__inner banner 4
 // (BLOCK)(END) - Banner
+

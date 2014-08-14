@@ -1,11 +1,12 @@
 ;(function(window, document, undefined) {
 	var Greatskin = new namespace("Greatskin");
 
+
 	Greatskin.Angular.directive('saveattr',[function() {
 		return {
 			restrict: "A",
 			scope: {
-				saveattr: "="
+				saveattr: "@"
 			},
 			transclude: true,
 			controller: function($scope) {
@@ -22,7 +23,7 @@
 			compile: function compile(tElement, tAttrs, transclude) {
 				return {
 					pre: function preLink(scope, iElement, iAttrs, controller, transclude) {
-						transclude(scope, function(clone, scope) {
+						transclude(scope.$parent, function(clone, scope) {
 							//console.log(scope.$parent);
 							iElement.append(clone);
 							//console.log(iElement);
@@ -43,12 +44,12 @@
 			restrict: "A",
 			//transclude: true,
 			controller: function($scope) {
-				$scope.boomla = "Before";
+				//$scope.boomla = "Before";
 			},
 			compile: function compile(tElement, tAttrs, transclude) {
 				return {
 					pre: function preLink(scope, iElement, iAttrs, controller) {
-						scope.boomla = "Pre";
+						//scope.boomla = "Pre";
 
 						var list = eval(iAttrs["saveattr"]);
 						for (var i=0;i<list.length;i++) {
@@ -62,7 +63,7 @@
 
 					},
 					post: function postLink(scope, iElement, iAttrs, controller) {
-						scope.boomla = "Post";
+						//scope.boomla = "Post";
 					}
 				}
 			}
