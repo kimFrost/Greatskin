@@ -164,7 +164,7 @@ $icon_extraspace: 5px;
 }
 
 .icon--fast {
-	background-image: url(/img/graphic/icon/icon_fast.png);
+	background-image: url(../img/graphic/icon/icon_fast.png);
 	min-height: #{image-height("img/graphic/icon/icon_fast.png")};
 	line-height: #{image-height("img/graphic/icon/icon_fast.png")};
 	padding-left: #{image-width("img/graphic/icon/icon_fast.png") + $icon_extraspace};
@@ -181,7 +181,7 @@ $icon_extraspace: 5px;
 }
 
 .icon--fastnavy {
-	background-image: url(/img/graphic/icon/icon_fast-navy.png);
+	background-image: url(../img/graphic/icon/icon_fast-navy.png);
 	min-height: #{image-height("img/graphic/icon/icon_fast-navy.png")};
 	line-height: #{image-height("img/graphic/icon/icon_fast-navy.png")};
 	padding-left: #{image-width("img/graphic/icon/icon_fast-navy.png") + $icon_extraspace};
@@ -198,7 +198,7 @@ $icon_extraspace: 5px;
 }
 
 .icon--instragram {
-	background-image: url(/img/graphic/icon/icon_instragram.png);
+	background-image: url(../img/graphic/icon/icon_instragram.png);
 	min-height: #{image-height("img/graphic/icon/icon_instragram.png")};
 	line-height: #{image-height("img/graphic/icon/icon_instragram.png")};
 	padding-left: #{image-width("img/graphic/icon/icon_instragram.png") + $icon_extraspace};
@@ -215,7 +215,7 @@ $icon_extraspace: 5px;
 }
 
 .icon--support {
-	background-image: url(/img/graphic/icon/icon_support.png);
+	background-image: url(../img/graphic/icon/icon_support.png);
 	min-height: #{image-height("img/graphic/icon/icon_support.png")};
 	line-height: #{image-height("img/graphic/icon/icon_support.png")};
 	padding-left: #{image-width("img/graphic/icon/icon_support.png") + $icon_extraspace};
@@ -232,7 +232,7 @@ $icon_extraspace: 5px;
 }
 
 .icon--thumb {
-	background-image: url(/img/graphic/icon/icon_thumb.png);
+	background-image: url(../img/graphic/icon/icon_thumb.png);
 	min-height: #{image-height("img/graphic/icon/icon_thumb.png")};
 	line-height: #{image-height("img/graphic/icon/icon_thumb.png")};
 	padding-left: #{image-width("img/graphic/icon/icon_thumb.png") + $icon_extraspace};

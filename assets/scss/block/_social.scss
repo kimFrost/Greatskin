@@ -14,19 +14,19 @@ $social_spacing: 10px;
 }
 
 .social--twitter {
-	background-image: url(/img/graphic/social/twitter.png);
+	background-image: url(../img/graphic/social/twitter.png);
 	height: #{image-height("img/graphic/social/twitter.png")};
 	width: #{image-width("img/graphic/social/twitter.png")};
 }
 
 .social--facebook {
-	background-image: url(/img/graphic/social/facebook.png);
+	background-image: url(../img/graphic/social/facebook.png);
 	height: #{image-height("img/graphic/social/facebook.png")};
 	width: #{image-width("img/graphic/social/facebook.png")};
 }
 
 .social--pinterest {
-	background-image: url(/img/graphic/social/pinterest.png);
+	background-image: url(../img/graphic/social/pinterest.png);
 	height: #{image-height("img/graphic/social/pinterest.png")};
 	width: #{image-width("img/graphic/social/pinterest.png")};
 }

@@ -1,0 +1,31 @@
+extends ../master
+
+block append head
+
+block append body
+	// (INSERT)(PLACEHOLDER) - Body
+	include ../blocks/banner.jade
+
+block append content
+	// (INSERT)(PLACEHOLDER) - Content
+	div.container
+		div.container__content
+			div.container__inner
+				div.grid.grid--12
+					include ../blocks/breadcrumb.jade
+				div.grid.grid--12.grid--alignright filters
+
+	div.container.container--spacebottom
+		div.container__content
+			div.container__inner
+				div.relation.relation--aside
+					include ../blocks/leftmenu.jade
+				div.relation.relation--main
+					include ../blocks/productlist.jade
+
+	div.container
+		div.container__content
+			div.container__inner
+				div.headline.headline--grey
+					div.headline__line
+				include ../blocks/pagging.jade

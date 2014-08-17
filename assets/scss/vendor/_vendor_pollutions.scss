@@ -4,6 +4,10 @@ html, body {
 }
 a {
 	color: inherit;
+	&:-webkit-any-link {
+		text-decoration: none;
+		color: inherit;
+	}
 }
 
 p {

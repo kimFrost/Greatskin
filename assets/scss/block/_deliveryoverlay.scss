@@ -1,0 +1,49 @@
+
+$deliveryoverlay_width: 350px;
+
+.deliveryoverlay {
+	@include box-shadow(0px 0px 15px 0px rgba(0,0,0,0.3));
+	display: block;
+	position: fixed;
+	opacity: 1;
+	z-index: 70;
+	width: $deliveryoverlay_width;
+	height: auto;
+	padding: 20px;
+	top: 0;
+	left: 0;
+	background-color: $color_white;
+	color: $color_textblack;
+	margin-top: 30px;
+	margin-left: -($deliveryoverlay_width / 2);
+	font-family: $font_lato;
+	&:after {
+		@include transform-origin(50%, 50%);
+		@include rotate(45deg);
+		content: "";
+		display: block;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background-color: $color_white;
+		top: 0px;
+		left: 50%;
+		margin-top: -5px;
+		margin-left: -10px;
+	}
+}
+
+.deliveryoverlay,
+.deliveryoverlay__title {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.deliveryoverlay__title {
+	@include fontSize(delta, 1);
+	color: $color_navy;
+	margin-bottom: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+}

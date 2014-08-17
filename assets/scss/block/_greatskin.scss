@@ -17,7 +17,8 @@ $greatskinHeaderHeight: 110px;
 .greatskin__basket,
 .greatskin__nav,
 .greatskin__body,
-.greatskin__footer {
+.greatskin__footer,
+.greatskin__search {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -89,6 +90,21 @@ $greatskinHeaderHeight: 110px;
 	height: $greatskinHeaderHeight;
 }
 
+.greatskin__search {
+	 display: block;
+	 float: right;
+	 height: $greatskinHeaderHeight;
+}
+
+.greatskin__searchinner {
+	display: block;
+	width: 200px;
+	height: 30px;
+	border-right: 1px solid $color_grey;
+	margin-top: (($greatskinHeaderHeight - 30px) / 2);
+	margin-right: 40px;
+}
+
 .greatskin__nav {
 	display: block;
 	float: left;
@@ -123,3 +139,4 @@ $greatskinHeaderHeight: 110px;
 	padding-top: 65px;
 	padding-bottom: 25px;
 }
+

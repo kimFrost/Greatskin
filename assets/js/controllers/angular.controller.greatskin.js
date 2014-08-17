@@ -13,12 +13,46 @@
 			states: {
 
 			},
+			deliveryoverlay: {
+				states: {
+					show: false
+				},
+				css: {
+					left: null,
+					top: null
+				}
+			},
 			css: {}
 		};
 
 		/* Scope Functions
-		 ===========================*/
+		===========================*/
+		$scope.greatskinctrl.toggleOverlay = function(elem, state) {
+			//console.log("toggleOverlay");
+			state = (state === undefined) ? "toggle" : state;
+			if (state === "toggle") {
+				$scope.greatskinctrl.deliveryoverlay.states.show = !$scope.greatskinctrl.deliveryoverlay.states.show;
+			}
+			else if (state === "hide") {
+				$scope.greatskinctrl.deliveryoverlay.states.show = false;
+			}
+			else if (state === "show") {
+				$scope.greatskinctrl.deliveryoverlay.states.show = true;
+			}
+			if ($scope.greatskinctrl.deliveryoverlay.states.show) {
+				$scope.greatskinctrl.setPos(elem);
+			}
+		};
+		$scope.greatskinctrl.setPos = function(e) {
+			var elem = angular.element(e.srcElement);
+			var rect = elem[0].getBoundingClientRect();
+			var left = rect.left + (rect.width / 2);
+			left = left.toString() + "px";
+			var top = rect.top.toString() + "px";
+			$scope.greatskinctrl.deliveryoverlay.css.left = left;
+			$scope.greatskinctrl.deliveryoverlay.css.top = top;
 
+		};
 		$scope.greatskinctrl.trustSrc = function(src) {
 			return $sce.trustAsResourceUrl(src);
 		};

@@ -22,19 +22,49 @@
 	-webkit-box-sizing: border-box;
 }
 
+.headline--oneline {
+	white-space: nowrap;
+	.headline__text {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.headline--notransform {
+	text-transform: none;
+}
+
 .headline--black {
 	color: $color_black;
 	.headline__line:after {
 		background-color: $color_black;
 	}
 }
-
 .headline--grey {
 	color: $color_lightgreyblue;
 	.headline__line:after {
 		background-color: $color_lightgreyblue;
 	}
 }
+.headline--darkgrey {
+	color: $color_darkgrey;
+	.headline__line:after {
+		background-color: $color_darkgrey;
+	}
+}
+
+
+// Text color modifications
+.headline--textblack {
+	color: $color_black;
+}
+.headline--textgrey {
+	color: $color_lightgreyblue;
+}
+.headline--textdarkgrey {
+	color: $color_darkgrey;
+}
+
 
 .headline__text {
 	display: table-cell;
