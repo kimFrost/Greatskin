@@ -3,7 +3,7 @@
 //-div.container.bannerblock(data-ng-controller="BannerblockCtrl")
 div.container.bannerblock(data-num-of-items="4")
 	//-div(data-saveattr="[{'boomla':'testvalue'}]")
-	div.bannerblock__banner(data-ng-class="{'bannerblock__banner--active': bannerblock.checkActive(0)}", data-ng-click="bannerblock.testFunc()")
+	div.bannerblock__banner(data-ng-class="{'bannerblock__banner--active': bannerblock.checkActive(0)}")
 		div.container__content
 			div.container__inner banner 1
 	div.bannerblock__banner(data-ng-class="{'bannerblock__banner--active': bannerblock.checkActive(1)}")
@@ -15,5 +15,12 @@ div.container.bannerblock(data-num-of-items="4")
 	div.bannerblock__banner(data-ng-class="{'bannerblock__banner--active': bannerblock.checkActive(3)}")
 		div.container__content
 			div.container__inner banner 4
+	ul.bannerblock__map
+		li.bannerblock__mapitem(data-ng-class="{'bannerblock__mapitem--active': bannerblock.checkActive(0)}", data-ng-click="bannerblock.switch(0, true)")
+		li.bannerblock__mapitem(data-ng-class="{'bannerblock__mapitem--active': bannerblock.checkActive(1)}", data-ng-click="bannerblock.switch(1, true)")
+		li.bannerblock__mapitem(data-ng-class="{'bannerblock__mapitem--active': bannerblock.checkActive(2)}", data-ng-click="bannerblock.switch(2, true)")
+		li.bannerblock__mapitem(data-ng-class="{'bannerblock__mapitem--active': bannerblock.checkActive(3)}", data-ng-click="bannerblock.switch(3, true)")
+	div.bannerblock__left(data-ng-click="bannerblock.switch(-1)")
+	div.bannerblock__right(data-ng-click="bannerblock.switch(+1)")
 // (BLOCK)(END) - Banner
 

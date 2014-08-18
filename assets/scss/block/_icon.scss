@@ -10,7 +10,7 @@ $icon_extraspace: 5px;
 }
 
 .icon--arrow {
-	background-image: url(/img/graphic/icon/icon_arrow.png);
+	background-image: url(../img/graphic/icon/icon_arrow.png);
 	min-height: #{image-height("img/graphic/icon/icon_arrow.png")};
 	line-height: #{image-height("img/graphic/icon/icon_arrow.png")};
 	padding-left: #{image-width("img/graphic/icon/icon_arrow.png") + $icon_extraspace};
@@ -27,7 +27,7 @@ $icon_extraspace: 5px;
 }
 
 .icon--arrowdown {
-	background-image: url(/img/graphic/icon/icon_arrowdown.png);
+	background-image: url(../img/graphic/icon/icon_arrowdown.png);
 	min-height: #{image-height("img/graphic/icon/icon_arrowdown.png")};
 	line-height: #{image-height("img/graphic/icon/icon_arrowdown.png")};
 	padding-left: #{image-width("img/graphic/icon/icon_arrowdown.png") + $icon_extraspace};
@@ -45,7 +45,7 @@ $icon_extraspace: 5px;
 
 
 .icon--arrowdowngrey {
-	background-image: url(/img/graphic/icon/icon_arrowdown-grey.png);
+	background-image: url(../img/graphic/icon/icon_arrowdown-grey.png);
 	min-height: #{image-height("img/graphic/icon/icon_arrowdown-grey.png")};
 	line-height: #{image-height("img/graphic/icon/icon_arrowdown-grey.png")};
 	padding-left: #{image-width("img/graphic/icon/icon_arrowdown-grey.png") + $icon_extraspace};
@@ -62,7 +62,7 @@ $icon_extraspace: 5px;
 }
 
 .icon--arrowdownsmall {
-	background-image: url(/img/graphic/icon/icon_arrowdown-small.png);
+	background-image: url(../img/graphic/icon/icon_arrowdown-small.png);
 	min-height: #{image-height("img/graphic/icon/icon_arrowdown-small.png")};
 	line-height: #{image-height("img/graphic/icon/icon_arrowdown-small.png")};
 	padding-left: #{image-width("img/graphic/icon/icon_arrowdown-small.png") + $icon_extraspace};
@@ -79,7 +79,7 @@ $icon_extraspace: 5px;
 }
 
 .icon--arrowright {
-	background-image: url(/img/graphic/icon/icon_arrowright.png);
+	background-image: url(../img/graphic/icon/icon_arrowright.png);
 	min-height: #{image-height("img/graphic/icon/icon_arrowright.png")};
 	line-height: #{image-height("img/graphic/icon/icon_arrowright.png")};
 	padding-left: #{image-width("img/graphic/icon/icon_arrowright.png") + $icon_extraspace};
@@ -96,7 +96,7 @@ $icon_extraspace: 5px;
 }
 
 .icon--arrowleft {
-	background-image: url(/img/graphic/icon/icon_arrowleft.png);
+	background-image: url(../img/graphic/icon/icon_arrowleft.png);
 	min-height: #{image-height("img/graphic/icon/icon_arrowleft.png")};
 	line-height: #{image-height("img/graphic/icon/icon_arrowleft.png")};
 	padding-left: #{image-width("img/graphic/icon/icon_arrowleft.png") + $icon_extraspace};
@@ -113,7 +113,7 @@ $icon_extraspace: 5px;
 }
 
 .icon--calender {
-	background-image: url(/img/graphic/icon/icon_calender.png);
+	background-image: url(../img/graphic/icon/icon_calender.png);
 	min-height: #{image-height("img/graphic/icon/icon_calender.png")};
 	line-height: #{image-height("img/graphic/icon/icon_calender.png")};
 	padding-left: #{image-width("img/graphic/icon/icon_calender.png") + $icon_extraspace};
@@ -130,7 +130,7 @@ $icon_extraspace: 5px;
  }
 
 .icon--copyright {
-	background-image: url(/img/graphic/icon/icon_copyright.png);
+	background-image: url(../img/graphic/icon/icon_copyright.png);
 	min-height: #{image-height("img/graphic/icon/icon_copyright.png")};
 	line-height: #{image-height("img/graphic/icon/icon_copyright.png")};
 	padding-left: #{image-width("img/graphic/icon/icon_copyright.png") + $icon_extraspace};
@@ -147,7 +147,7 @@ $icon_extraspace: 5px;
 }
 
 .icon--facebook {
-	background-image: url(/img/graphic/icon/icon_facebook.png);
+	background-image: url(../img/graphic/icon/icon_facebook.png);
 	min-height: #{image-height("img/graphic/icon/icon_facebook.png")};
 	line-height: #{image-height("img/graphic/icon/icon_facebook.png")};
 	padding-left: #{image-width("img/graphic/icon/icon_facebook.png") + $icon_extraspace};

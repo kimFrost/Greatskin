@@ -42,9 +42,15 @@
 				};
 				$scope.bannerblock.switch = function(direction, jump) {
 					direction = (direction === undefined) ? 1 : direction;
+					jump = (jump === undefined) ? false : jump;
 					$timeout.cancel($scope.bannerblock.timer);
 					var activeIndex = $scope.bannerblock.activebanner;
-					var newActiveIndex = (activeIndex + direction) % $scope.bannerblock.options.numOfItems;
+					if (jump) {
+						newActiveIndex = direction;
+					}
+					else {
+						var newActiveIndex = (activeIndex + direction) % $scope.bannerblock.options.numOfItems;
+					}
 					if (newActiveIndex < 0) {
 						newActiveIndex = Math.abs($scope.bannerblock.options.numOfItems + newActiveIndex);
 					}

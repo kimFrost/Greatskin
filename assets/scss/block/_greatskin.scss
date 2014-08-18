@@ -18,7 +18,10 @@ $greatskinHeaderHeight: 110px;
 .greatskin__nav,
 .greatskin__body,
 .greatskin__footer,
-.greatskin__search {
+.greatskin__search,
+.greatskin__searchinput,
+.greatskin__searchinner,
+.greatskin__searchbutton {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -96,15 +99,6 @@ $greatskinHeaderHeight: 110px;
 	 height: $greatskinHeaderHeight;
 }
 
-.greatskin__searchinner {
-	display: block;
-	width: 200px;
-	height: 30px;
-	border-right: 1px solid $color_grey;
-	margin-top: (($greatskinHeaderHeight - 30px) / 2);
-	margin-right: 40px;
-}
-
 .greatskin__nav {
 	display: block;
 	float: left;
@@ -140,3 +134,34 @@ $greatskinHeaderHeight: 110px;
 	padding-bottom: 25px;
 }
 
+.greatskin__searchinner {
+	display: block;
+	width: 200px;
+	height: 30px;
+	border-right: 1px solid $color_grey;
+	margin-top: (($greatskinHeaderHeight - 30px) / 2);
+	margin-right: 40px;
+}
+
+.greatskin__searchinput {
+	display: block;
+	width: 100%;
+	height: 30px;
+	padding: 5px;
+	outline: none;
+	border: none;
+}
+
+.greatskin__searchbutton {
+	display: block;
+	width: 100%;
+	height: 30px;
+	padding: 5px;
+	outline: none;
+	border: none;
+	background-image: url("../img/graphic/search.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: transparent;
+	cursor: pointer;
+}
