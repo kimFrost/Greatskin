@@ -72,6 +72,11 @@ $greatskinHeaderHeight: 110px;
 	align-items: center;
 	*/
 
+	@include mediaQueries(mobile tablet) {
+		min-height: $greatskinHeaderHeight;
+		height: auto;
+	}
+
 	&:after {
 		content: "";
 		display: block;
@@ -84,6 +89,10 @@ $greatskinHeaderHeight: 110px;
 	float: left;
 	margin-top: 34px;
 	margin-right: 130px;
+	@include mediaQueries(mobile tablet) {
+		width: 100%;
+		clear: both;
+	}
 }
 
 .greatskin__basket {
@@ -91,12 +100,22 @@ $greatskinHeaderHeight: 110px;
 	float: right;
 	width: 210px;
 	height: $greatskinHeaderHeight;
+	@include mediaQueries(mobile) {
+		width: 100%;
+		clear: both;
+	}
 }
 
 .greatskin__search {
-	 display: block;
-	 float: right;
-	 height: $greatskinHeaderHeight;
+	display: block;
+	float: right;
+	height: $greatskinHeaderHeight;
+	@include mediaQueries(mobile tablet) {
+		//display: none;
+		height: auto;
+		width: 100%;
+		clear: both;
+	}
 }
 
 .greatskin__nav {
@@ -104,6 +123,11 @@ $greatskinHeaderHeight: 110px;
 	float: left;
 	line-height: $greatskinHeaderHeight;
 	cursor: pointer;
+	@include mediaQueries(mobile) {
+		width: 100%;
+		clear: both;
+		line-height: ($greatskinHeaderHeight / 1.4);
+	}
 }
 
 .greatskin__navitem {
@@ -141,6 +165,12 @@ $greatskinHeaderHeight: 110px;
 	border-right: 1px solid $color_grey;
 	margin-top: (($greatskinHeaderHeight - 30px) / 2);
 	margin-right: 40px;
+	position: relative;
+	@include mediaQueries(mobile tablet) {
+		width: 100%;
+		margin-right: 0;
+		margin-top: 0;
+	}
 }
 
 .greatskin__searchinput {
@@ -164,4 +194,11 @@ $greatskinHeaderHeight: 110px;
 	background-position: center center;
 	background-color: transparent;
 	cursor: pointer;
+	@include mediaQueries(mobile tablet) {
+		position: absolute;
+		width: #{image-width("../img/graphic/search.png")};
+		top: 0;
+		right: 10px;
+		background-position: right center;
+	}
 }

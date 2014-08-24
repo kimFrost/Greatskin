@@ -56,6 +56,9 @@ $__blockName: 'grid';
 .grid--alignleft {
 	text-align: left;
 }
+.grid--norelative {
+	position: static;
+}
 
 // Grid sizes
 @for $i from 1 through $__gridSize {

@@ -2,7 +2,7 @@
 /* Global Variables */
 
 // Options booleans
-$useAdaptive: false !global; // Media Querie mixin will skip if this ain't true
+$useAdaptive: true !global; // Media Querie mixin will skip if this ain't true
 $debug: false !global; // Show debug features
 $showClasses: false !global; // Show debug features
 $allowCrossAlter: true !global; // Allow modules to alter each other // DEPRECATED --> Replaced by new blockconstructor extendmode function
