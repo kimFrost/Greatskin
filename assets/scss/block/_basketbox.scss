@@ -106,6 +106,10 @@ $basketboxCountDimension: 24px;
 	position: absolute;
 	right: 0;
 	top: 50%;
+	@include mediaQueries(mobile) {
+		//right: auto;
+		//left: 130px;
+	}
 }
 
 .basketbox__title {
@@ -124,6 +128,7 @@ $basketboxCountDimension: 24px;
 	bottom: 0;
 	background: #cc0000;
 	z-index: 1;
+	display: none; // Permanent hidden
 }
 .basketbox__dropdown--show {
 	@include translate(0%, 100%);

@@ -4,7 +4,8 @@
 .bannerblock {
 	display: block;
 	width: 100%;
-	height: 300px;
+	//height: 300px;
+	height: auto;
 	overflow: hidden;
 	background-color: $color_lightgrey;
 	position: relative;
@@ -27,13 +28,18 @@
 
 .bannerblock__banner {
 	@include transition(opacity 300ms ease);
-	@include fill();
+	//@include fill();
 	display: block;
 	width: 100%;
 	background-color: $color_lightgrey;
 	z-index: 50;
 	opacity: 0;
 	z-index: 1;
+	img {
+		display: block;
+		width: 100%;
+		margin: 0;
+	}
 	@include onlyInDebug() {
 		background-color: greenyellow;
 	}

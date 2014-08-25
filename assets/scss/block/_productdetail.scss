@@ -83,7 +83,13 @@
 		margin-left: 0;
 	}
 	@include mediaQueries(mobile tablet) {
-		width: 90px;
+		//width: 90px;
+		width: (98%/3);
+		margin-left: 0;
+		margin-right: 1%;
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
 		img {
 			width: 100%;
 		}

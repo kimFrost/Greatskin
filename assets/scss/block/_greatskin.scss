@@ -39,6 +39,9 @@ $greatskinHeaderHeight: 110px;
 	font-weight: 300;
 	z-index: 30;
 	position: relative;
+	@include mediaQueries(mobile) {
+		text-align: center;
+	}
 }
 
 .greatskin__blackbar--coal {
@@ -48,6 +51,9 @@ $greatskinHeaderHeight: 110px;
 	font-weight: 400;
 	padding-top: 8px;
 	text-transform: uppercase;
+	@include mediaQueries(mobile tablet) {
+		display: none;
+	}
 }
 
 .greatskin__header {
@@ -92,6 +98,7 @@ $greatskinHeaderHeight: 110px;
 	@include mediaQueries(mobile tablet) {
 		width: 100%;
 		clear: both;
+		text-align: center;
 	}
 }
 
@@ -127,6 +134,7 @@ $greatskinHeaderHeight: 110px;
 		width: 100%;
 		clear: both;
 		line-height: ($greatskinHeaderHeight / 1.4);
+		text-align: center;
 	}
 }
 
@@ -135,6 +143,9 @@ $greatskinHeaderHeight: 110px;
 	float: left;
 	& + & {
 		margin-left: 40px;
+	}
+	@include mediaQueries(mobile) {
+		display: inline-block;
 	}
 }
 
@@ -156,6 +167,12 @@ $greatskinHeaderHeight: 110px;
 	color: $color_white;
 	padding-top: 65px;
 	padding-bottom: 25px;
+	@include mediaQueries(mobile) {
+		text-align: center;
+		table {
+			margin: 0 auto;
+		}
+	}
 }
 
 .greatskin__searchinner {
