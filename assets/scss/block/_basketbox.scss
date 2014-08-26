@@ -72,7 +72,8 @@ $basketboxCountDimension: 24px;
 	@include fontSize(beta, 1.3);
 	text-align: left;
 	overflow: hidden;
-	height: 100%;
+	//height: 100%;
+	height: 110px;
 	padding-right: 10px;
 	position: relative;
 	z-index: 20;
@@ -84,15 +85,36 @@ $basketboxCountDimension: 24px;
 	display: -webkit-flex;
 	display: flex;
 
+	/*
 	-webkit-box-align: center;
 	-webkit-flex-align: center;
 	-ms-flex-align: center;
 	-webkit-align-items: center;
 	align-items: center;
+	*/
 
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
 	justify-content: center;
 
-	webkit-flex-direction: column;
+	/*
+		-webkit-box-orient: vertical;
+		-moz-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-moz-box-direction: normal;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	*/
+
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
 	flex-direction: column;
 
 	// IE 9
